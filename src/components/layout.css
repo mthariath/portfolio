@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster+Two:400,700|Raleway:300,800');
 
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+
 ul.unstyled {
   list-style: none;
 }
@@ -15,7 +34,7 @@ body, #___gatsby, [data-reactroot] {
   margin: 0;
   min-height: 100vh;
   box-sizing: border-box;
-  background-color: #F6FFFD;
+  
 }
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 

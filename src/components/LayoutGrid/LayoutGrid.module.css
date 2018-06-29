@@ -1,5 +1,6 @@
 .Grid {
     display: grid;
+    position: relative;
     grid-template-columns: 5vw 160px 3fr 5vw max-content 5vw;
     grid-template-rows: 3.5vw 20vh 2vw minmax(0, min-content) min-content 1fr max-content;
     grid-template-areas: 
