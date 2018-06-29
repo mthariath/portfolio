@@ -6,9 +6,9 @@ import {FlavorContext, flavors} from '../../Utils/FlavorContext'
 const Button = ( props ) => {
 
     // const classArr = [];
-    const variants = ['Large', 'Block', 'Small', 'Icon'];
-    const buttonClasses = [classes.Button]
-    buttonClasses.push(variants.filter(variant => props[variant]).map(variant => classes[variant]));
+    const variants = ['Large', 'Block', 'Small', 'Icon', 'Active'];
+    let buttonClasses = [classes.Button, 'hello']
+    buttonClasses = buttonClasses.concat(variants.filter(variant => props[variant]).map(variant => classes[variant]));
 
     return (
     <FlavorContext.Consumer>

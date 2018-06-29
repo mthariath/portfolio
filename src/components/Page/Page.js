@@ -13,7 +13,7 @@ class Page extends Component {
                 <LayoutGrid>
                     <Background />
                     <Logo />
-                    <Nav />
+                    <Nav location = {this.props.location} />
                     <div style={{gridArea: 'main'}}>
                         {this.props.children}
                     </div>

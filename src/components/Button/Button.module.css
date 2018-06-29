@@ -30,7 +30,7 @@
     left: 50%;
 }
 
-.Button:hover::after, .Button:active::after, .Button:focus::after {
+.Button:hover::after, .Button:active::after, .Button:focus::after, .Active::after {
     width: 100%;
     left: 0%;
 }

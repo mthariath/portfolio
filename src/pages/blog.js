@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const BlogPage = () => (
-  <Layout>
+const BlogPage = ( props ) => (
+  <Layout location={props.location}>
     <h1>My Bloggg</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>

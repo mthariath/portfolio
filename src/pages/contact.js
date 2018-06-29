@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const ContactPage = () => (
-  <Layout>
+const ContactPage = ( props ) => (
+  <Layout location={props.location}>
     <h1>Contact me!</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
