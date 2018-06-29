@@ -8,8 +8,15 @@ import {FlavorContext, flavors} from '../../Utils/FlavorContext'
 
 class Page extends Component {
     render ( ) {
+        let color='';
+        // if(this.props.location === '/')
+        color = this.props.location === '/' ? 'teal' 
+                : this.props.location.includes('portfolio') ? 'lavender'
+                :  this.props.location.includes('blog') ? 'lavender'
+                :  this.props.location.includes('about') ? 'lavender'
+                :  this.props.location.includes('contact') ? 'lavender' : 'teal';
         return (
-            <FlavorContext.Provider value={this.props.color}>
+            <FlavorContext.Provider value={color}>
                 <LayoutGrid>
                     <Background />
                     <Logo />
