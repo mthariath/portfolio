@@ -6,7 +6,13 @@ import { StaticQuery, graphql } from "gatsby"
 import Page from './Page/Page'
 import './layout.css'
 
-const Layout = ({ children, color, location }) => (
+
+
+
+
+
+
+const Layout = ({ children, color, location, mainClass }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -26,13 +32,20 @@ const Layout = ({ children, color, location }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        <Page color ={color ? color : 'teal'} location = {location.pathname} >
-          {children} 
-        </Page>
+
+              <Page location = {location.pathname} mainClass = {mainClass}>
+                {children} 
+              </Page>
+
       </>
     )}
   />
 )
+
+
+
+
+
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

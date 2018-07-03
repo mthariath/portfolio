@@ -49,3 +49,27 @@
     }
     
 }  
+
+
+.enter {
+    opacity: 0.01;
+}
+.enterActive {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+.exit {
+    left: 50%;
+    position: absolute;
+    top: 278px;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+.exitActive {
+    opacity: 0.01;
+    transition: opacity 500ms ease-out;
+    left: 50%;
+    position: absolute;
+    top: 278px;
+    transform: translateX(-50%);
+}

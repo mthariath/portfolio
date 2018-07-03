@@ -3,7 +3,7 @@ import LayoutGrid from '../LayoutGrid/LayoutGrid'
 import Nav from '../Nav/Nav'
 import Logo from '../Logo/Logo'
 import Background from '../Background/Background'
-import {FlavorContext, flavors} from '../../Utils/FlavorContext'
+import {FlavorContext} from '../../Utils/FlavorContext'
 
 
 class Page extends Component {
@@ -17,11 +17,11 @@ class Page extends Component {
                 :  this.props.location.includes('contact') ? 'lavender' : 'teal';
         return (
             <FlavorContext.Provider value={color}>
-                <LayoutGrid>
+                <LayoutGrid location={this.props.location}>
                     <Background />
                     <Logo />
                     <Nav location = {this.props.location} />
-                    <div style={{gridArea: 'main'}}>
+                    <div style={{gridArea: 'main'}} className = {this.props.mainClass}>
                         {this.props.children}
                     </div>
                 </LayoutGrid>

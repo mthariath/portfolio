@@ -1,0 +1,31 @@
+@media (min-width: 1800px) {
+    .HomePage {
+
+        display: grid;
+        grid-template-columns: 5vw minmax(0px, 1fr) minmax(0px, 2fr) 5vw;
+        grid-template-rows: max-content minmax(0px, 2fr) 5vw;
+        grid-template-areas: 
+                        ". title . ."
+                        ". . intro ."
+                        ". . . ."
+        /* // display: flex;
+        // justify-content:  space-between;
+        // align-content: space-around;
+        // padding: 3rem; */
+    
+    }
+    
+    .Intro {
+        grid-area: intro;
+        transform: translateX(-5rem) translateY(-5rem)
+    }
+}
+
+
+.Signature {
+    text-align: right;
+    font-weight: 900;
+    &::before {
+        content: "-"
+    }
+}

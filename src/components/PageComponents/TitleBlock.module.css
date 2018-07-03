@@ -1,0 +1,40 @@
+@media (max-width: 640px) {
+    .Title {
+        font-size: 3.5rem;
+    }
+}
+@media (min-width: 640px) and (max-width: 800px) {
+    .Title {
+        font-size: 3.5rem;
+    }
+
+}
+@media (min-width: 800px) and (max-width: 1024px) {
+    .Title {
+        font-size: 3.5rem;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1800px) {
+    .Title {
+        font-size: 4.5rem;
+    }
+    
+}
+@media (min-width: 1800px) {
+    .Title {
+        font-size: 6rem;
+    }
+    .Subtitle {
+        font-size: 1.8rem;
+    }
+    
+}
+
+.Title, .Subtitle {
+    font-family: 'Lobster Two', cursive;
+    margin: 0 0 2rem 0;
+}
+
+.Subtitle {
+    font-size: 1.5rem;
+}
