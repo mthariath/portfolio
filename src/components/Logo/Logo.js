@@ -1,6 +1,5 @@
 import React from 'react';
 import {FlavorContext, flavors} from '../../Utils/FlavorContext'
-import ReactTransitionGroup from 'react-addons-transition-group'
 
 function FirstChild(props) {
     const childrenArray = React.Children.toArray(props.children);
@@ -26,7 +25,6 @@ const Logo = ( props ) => {
 
 
                 return (
-                    <ReactTransitionGroup component={FirstChild}>
                         <div style={{gridArea: 'logo', margin: '.2rem'}}>
                             <svg xmlns="http://www.w3.org/2000/svg"  style={{isolation: 'isolate'}} viewBox="0 0 544.535 881.575" height="100%">
                                 <g id="logo">
@@ -38,7 +36,6 @@ const Logo = ( props ) => {
                                 </g>
                             </svg>
                         </div>
-                    </ReactTransitionGroup>
                 )
             }}
         

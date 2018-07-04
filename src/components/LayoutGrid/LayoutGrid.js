@@ -17,11 +17,12 @@ class TransitionHandler extends React.Component {
 
 function LayoutGrid(props) { 
 	return (
-		<TransitionGroup>
+		<TransitionGroup className='asdf'>
 			<CSSTransition
 			classNames={{enter, enterActive, exit, exitActive}}
 			timeout={{ enter: 500, exit: 500 }}
 			key={props.location.pathname}
+			onEnter={()=>{console.log('awerasdf')}}
 			>
 				<TransitionHandler location={props.location}>
 					<div className={classes.Grid}> 

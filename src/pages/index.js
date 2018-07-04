@@ -16,7 +16,6 @@ const IndexPage = ( props ) => {
             <Paragraph>I'm a web developer, product designer,and all around good guy. I love solving problems and learning new things.</Paragraph>
             <Paragraph>Feel free to check out my work, read about my crazy life, or read my crazy thoughts. </Paragraph>
             <Paragraph>If you're working on something awesome <span className="small-text">(that I can help with,) </span>I'd love to hear from you!</Paragraph>
-            <p className={classes.Signature}>Mike</p>
         </div>
       </ArticleGrid>
     </Layout>
