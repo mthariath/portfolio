@@ -17,8 +17,8 @@
 @media (max-width: 800px) {
     .Grid {
         display: grid;
-        grid-template-columns: 5vw minmax(70px, min-content) 3fr 5vw 2fr 10vw;
-        grid-template-rows: 5vw 15vh 5vw minmax(0, min-content) min-content minmax(0, max-content) max-content max-content;
+        grid-template-columns: 5vw minmax(70px, min-content) 3fr 5vw 2fr 5vw;
+        grid-template-rows: 5vw 15vh 5vw minmax(0, min-content) min-content 1fr max-content max-content;
         grid-template-areas: 
             ". . . . . ."
             ". logo res-nav res-nav res-nav ."
@@ -35,8 +35,8 @@
 @media (max-width: 640px) {
     .Grid {
         display: grid;
-        grid-template-columns: 5vw minmax(70px, min-content) 3fr 5vw 2fr 1fr;
-        grid-template-rows: 5vw 15vh 5vw minmax(0, min-content)  min-content minmax(0, max-content) max-content max-content;
+        grid-template-columns: 5vw minmax(70px, min-content) 3fr 5vw 2fr 5vw;
+        grid-template-rows: 5vw 15vh 5vw minmax(0, min-content)  min-content 1fr max-content max-content;
         grid-template-areas: 
             ". . . . . ."
             ". logo res-nav res-nav res-nav res-nav res-nav "   

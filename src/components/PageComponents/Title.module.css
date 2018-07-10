@@ -1,0 +1,91 @@
+
+.Title1, .Title2, .Title3, .Title4, .Title5, .Title6 {
+    font-family: 'Lobster Two', cursive;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0;
+    position: relative;
+}
+
+.Title4, .Title5, .Title6 {
+    font-weight: inherit;
+}
+@media (max-width: 1024px) {
+    .Title1 {
+        font-size: 2.7rem;
+    }
+    .Title2 {
+        font-size: 2.5rem;
+    }
+    .Title3 {
+        font-size: 2rem;
+    }
+    .Title4 {
+        font-size: 1.7rem;
+    }
+    .Title5 {
+        font-size: 1.5rem;
+    }
+    .Title6 {
+        font-size: 1.15rem;
+    }
+
+    
+}
+@media (min-width: 1024px) and (max-width: 1800px) {
+    .Title1 {
+        font-size: 4.5rem;
+    }
+    .Title2 {
+        font-size: 3.75rem;
+    }
+    .Title3 {
+        font-size: 3rem;
+    }
+    .Title4 {
+        font-size: 2.25rem;
+    }
+    .Title5 {
+        font-size: 1.75rem;
+    }
+    .Title6 {
+        font-size: 1.25rem;
+    }
+
+    
+    
+}
+@media (min-width: 1800px) {
+    .Title1 {
+        font-size: 6rem;
+    }
+    .Title2 {
+        font-size: 5rem;
+    }
+    .Title3 {
+        font-size: 4rem;
+    }
+    .Title4 {
+        font-size: 3rem;
+    }
+    .Title5 {
+        font-size: 2rem;
+    }
+    .Title6 {
+        font-size: 1.5rem;
+    }
+
+    
+}
+
+.Underline::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 0;
+    height: 5px;
+    bottom: 0;
+    transition: all 0.3s cubic-bezier(.82,.22,.44,1.52);
+    transform: translateY(3px);
+    left: 20%;
+    width: 60%;
+}

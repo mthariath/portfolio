@@ -3,6 +3,9 @@ import LayoutGrid from '../LayoutGrid/LayoutGrid'
 import Nav from '../Nav/Nav'
 import Logo from '../Logo/Logo'
 import Background from '../Background/Background'
+import Footer from '../Footer/Footer'
+import {Fade} from 'react-reveal'
+
 import {FlavorContext} from '../../Utils/FlavorContext'
 
 
@@ -12,11 +15,12 @@ class Page extends Component {
         // if(this.props.location === '/')
         color = this.props.location === '/' ? 'teal' 
                 : this.props.location.includes('portfolio') ? 'lavender'
-                :  this.props.location.includes('blog') ? 'lavender'
-                :  this.props.location.includes('about') ? 'lavender'
+                :  this.props.location.includes('blog') ? 'orange'
+                :  this.props.location.includes('about') ? 'cherry'
                 :  this.props.location.includes('contact') ? 'lavender' : 'teal';
         return (
             <FlavorContext.Provider value={color}>
+            <Fade>
                 <LayoutGrid location={this.props.location}>
                     <Background />
                     <Logo />
@@ -24,7 +28,9 @@ class Page extends Component {
                     <div style={{gridArea: 'main'}} className = {this.props.mainClass}>
                         {this.props.children}
                     </div>
+                    <Footer />
                 </LayoutGrid>
+                </Fade>
             </FlavorContext.Provider>
         )
     }

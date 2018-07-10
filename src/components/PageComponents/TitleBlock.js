@@ -1,11 +1,12 @@
 import React from 'react'
 import classes from './TitleBlock.module.css'
+import Title from './Title'
 
 const TitleBlock = ( {title, subtitle} ) => {
     return (
         <>
-            <p className={classes.Title}>{title}</p>
-            <p className={classes.Subtitle}>{subtitle}</p>
+            <Title size='1'>{title}</Title>
+            <Title size='5'>{subtitle}</Title>
         </>
     )
 }

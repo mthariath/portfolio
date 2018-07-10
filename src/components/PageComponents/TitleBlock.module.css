@@ -1,4 +1,14 @@
-@media (max-width: 640px) {
+.Subtitle {
+    font-size: 2rem;
+}
+.Title, .Subtitle {
+    font-family: 'Lobster Two', cursive;
+    margin: 0 0 1rem 0;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* @media (max-width: 640px) {
     .Title {
         font-size: 3.5rem;
     }
@@ -8,10 +18,15 @@
         font-size: 3.5rem;
     }
 
-}
-@media (min-width: 800px) and (max-width: 1024px) {
+} */
+@media (max-width: 1024px) {
     .Title {
         font-size: 3.5rem;
+        margin-bottom: 0;
+    }
+
+    .Subtitle {
+        font-size:  1.5rem;
     }
 }
 @media (min-width: 1024px) and (max-width: 1800px) {
@@ -24,18 +39,8 @@
     .Title {
         font-size: 6rem;
     }
-    .Subtitle {
-        font-size: .5rem;
-    }
+
     
 }
 
-.Title, .Subtitle {
-    font-family: 'Lobster Two', cursive;
-    margin: 0 0 1rem 0;
-    color: rgba(0, 0, 0, 0.8);
-}
 
-.Subtitle {
-    font-size: 2rem;
-}

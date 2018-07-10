@@ -25,18 +25,16 @@ const Layout = ({ children, color, location, mainClass }) => (
     `}
     render={data => (
       <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        />
-
-              <Page location = {location.pathname} mainClass = {mainClass}>
-                {children} 
-              </Page>
-
+        <Page location = {location.pathname} mainClass = {mainClass}>
+          <Helmet
+            title={data.site.siteMetadata.title}
+            meta={[
+              { name: 'description', content: 'Sample' },
+              { name: 'keywords', content: 'sample, something' },
+            ]}
+          />
+          {children} 
+        </Page>
       </>
     )}
   />

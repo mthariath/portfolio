@@ -2,10 +2,10 @@
     .Grid {
 
         display: grid;
-        grid-template-columns: 5vw minmax(0px, 1fr) minmax(0px, 2fr) 5vw;
+        grid-template-columns: 5vw minmax(0px, 1fr) minmax(0px, 3fr) 5vw;
         grid-template-rows: max-content minmax(0px, 2fr) 5vw;
         grid-template-areas: 
-                        ". title . ."
+                        ". title title ."
                         ". . intro ."
                         ". . . ."
         /* // display: flex;

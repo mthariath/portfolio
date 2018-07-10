@@ -1,11 +1,6 @@
 import React from 'react';
 import {FlavorContext, flavors} from '../../Utils/FlavorContext'
 
-function FirstChild(props) {
-    const childrenArray = React.Children.toArray(props.children);
-    return childrenArray[0] || null;
-}
-
 const Logo = ( props ) => {
     return (
         <FlavorContext.Consumer>
