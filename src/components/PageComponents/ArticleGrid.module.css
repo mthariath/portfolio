@@ -3,11 +3,11 @@
 
         display: grid;
         grid-template-columns: 5vw minmax(0px, 1fr) minmax(0px, 3fr) 5vw;
-        grid-template-rows: max-content minmax(0px, 2fr) 5vw;
+        grid-template-rows: max-content minmax(0px, 2fr);
         grid-template-areas: 
                         ". title title ."
-                        ". . intro ."
-                        ". . . ."
+                        ". . intro .";
+                        
         /* // display: flex;
         // justify-content:  space-between;
         // align-content: space-around;

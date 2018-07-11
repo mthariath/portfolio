@@ -4,6 +4,7 @@
     color: rgba(0, 0, 0, 0.8);
     margin: 0;
     position: relative;
+    user-select: none;
 }
 
 .Title4, .Title5, .Title6 {

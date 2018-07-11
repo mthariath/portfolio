@@ -12,10 +12,23 @@ const TitleBox = ( props ) => {
         padding: '1rem', 
         margin: '4rem 6vw'
     }
+
+    const innerCss = props.grid ? {
+      alignSelf: 'stretch',
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+      padding: '2rem 1rem',
+      '& *': {
+          margin: '.5rem'
+      }
+      
+    } : {padding: '2rem 1rem'};
     return (
         <div css={css}>
             <Title size='6' underline>{props.title}</Title>
-            <div css={{padding: '1rem'}}>
+            <div css={innerCss}>
                 {props.children}
             </div>
         </div>

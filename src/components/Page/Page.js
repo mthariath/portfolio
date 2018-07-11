@@ -20,16 +20,16 @@ class Page extends Component {
                 :  this.props.location.includes('contact') ? 'lavender' : 'teal';
         return (
             <FlavorContext.Provider value={color}>
-            <Fade>
-                <LayoutGrid location={this.props.location}>
-                    <Background />
-                    <Logo />
-                    <Nav location = {this.props.location} />
-                    <div style={{gridArea: 'main'}} className = {this.props.mainClass}>
-                        {this.props.children}
-                    </div>
-                    <Footer />
-                </LayoutGrid>
+                <Fade>
+                    <LayoutGrid>
+                        <Background />
+                        <Logo />
+                        <Nav location = {this.props.location} />
+                        <div style={{gridArea: 'main'}} className = {this.props.mainClass}>
+                            {this.props.children}
+                        </div>
+                        <Footer />
+                    </LayoutGrid>
                 </Fade>
             </FlavorContext.Provider>
         )

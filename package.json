@@ -8,6 +8,8 @@
     "gatsby": "next",
     "gatsby-plugin-glamor": "next",
     "gatsby-plugin-react-helmet": "next",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-remark": "^1.7.44",
     "glamor": "^2.20.40",
     "glamorous": "^4.13.1",
     "react": "^16.4.1",

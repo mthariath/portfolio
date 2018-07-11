@@ -1,5 +1,4 @@
 import React from 'react'
-import classes from './TitleBlock.module.css'
 import Title from './Title'
 
 const TitleBlock = ( {title, subtitle} ) => {

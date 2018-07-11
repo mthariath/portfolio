@@ -1,36 +1,26 @@
 import React from 'react';
 import classes from './LayoutGrid.module.css';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import {FlavorContext, flavors} from '../../Utils/FlavorContext'
 
-const {enter, enterActive, exitActive, exit} = classes
-
-class TransitionHandler extends React.Component {
-	shouldComponentUpdate() {
-	  return this.props.location.pathname === window.location.pathname;
-	}
-  
-	render() {
-	  return this.props.children;
-	}
-  }
   
 
 function LayoutGrid(props) { 
 	return (
-		<TransitionGroup className='asdf'>
-			<CSSTransition
-			classNames={{enter, enterActive, exit, exitActive}}
-			timeout={{ enter: 500, exit: 500 }}
-			key={props.location.pathname}
-			onEnter={()=>{console.log('awerasdf')}}
-			>
-				<TransitionHandler location={props.location}>
-					<div className={classes.Grid}> 
+		<FlavorContext.Consumer>
+			{flavor => {
+				const css = {
+					'& *::selection': {
+						background: flavors[flavor].main,
+						color: flavors[flavor].bold
+					}
+				}
+				return (
+					<div css={css} className={classes.Grid}> 
 						{props.children}
 					</div>
-				</TransitionHandler>
-		</CSSTransition>
-	</TransitionGroup>
+				)
+			}}
+		</FlavorContext.Consumer>
 	)
 };
 

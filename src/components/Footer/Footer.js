@@ -1,8 +1,8 @@
 import React from 'react';
 import {FlavorContext, flavors} from '../../Utils/FlavorContext'
-import classes from './Footer.module.css';
-import Button from '../Button/Button';
-import {Link} from 'gatsby'
+// import classes from './Footer.module.css';
+// import Button from '../Button/Button';
+// import {Link} from 'gatsby'
 
 const Footer = ( props ) => (
     <FlavorContext.Consumer>
