@@ -3,9 +3,9 @@ import classes from './ArticleGrid.module.css'
 import TitleBlock from './TitleBlock'
 import { Fade } from 'react-reveal'
 
-const ArticleGrid = ( {children, title, subtitle} ) => {
+const ArticleGrid = ( {children, title, subtitle, transition} ) => {
     return (
-        <Fade right cascade>
+        <Fade bottom = {transition} cascade={transition}>
             <div className={classes.Grid}>
                 
                 <div style={{gridArea: 'title'}}>

@@ -11,7 +11,7 @@ const IndexPage = ( props ) => {
   
   return (
     <Layout location={props.location}>
-      <ArticleGrid title='Hi There!' subtitle ={<>my name is <strong>Mike</strong>.</>}>
+      <ArticleGrid transition title='Hi There!' subtitle ={<>my name is <strong>Mike</strong>.</>}>
         <div className={classes.Intro}>
             <Paragraph>I'm a web developer, product designer,and all around good guy. I love solving problems and learning new things.</Paragraph>
             <Paragraph>Feel free to check out my work, read about my crazy life, or read my crazy thoughts. </Paragraph>
