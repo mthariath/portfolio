@@ -1,30 +1,32 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import {Fade} from 'react-reveal'
+import {FlavorContext, flavors} from '../../Utils/FlavorContext'
+import Title from './Title'
+import classes from './PortfolioPageListing.module.css'
 
 const PortfolioPageListing = ({project})=>{
-    console.log(project.frontmatter.image.childImageSharp.sizes)
-    const wrapperStyles = {
-        maxWidth: '600px',
-        minWidth: '60%',
-        margin: '3rem',
-        '& details': {
-            display: 'none'
-        },
-        '@media (max-width: 800px)': {
-            minWidth: '90%',
-            margin: '2rem'
-        }
-    }
-
-
     return (
-    <Fade bottom>
-        <article css={wrapperStyles}>
-            <Img sizes={project.frontmatter.image.childImageSharp.sizes} />
-            <details>{project.frontmatter.title}</details>
-        </article>
-    </Fade>
+        <FlavorContext.Consumer>
+            {flavor => {
+                const descCss = {
+                    background: flavors[flavor].bg
+                }
+                return (
+                <Fade bottom>
+                    <article className={classes.Wrapper}>
+                        <Img sizes={project.frontmatter.image.childImageSharp.sizes} />
+                        <div css={descCss} className={classes.DescriptionBox}>
+                            <Title size='6'>{project.frontmatter.title}</Title>
+                            <Title size='6'>{project.frontmatter.title}</Title>
+                            <Title size='6'>{project.frontmatter.title}</Title>
+                        </div >
+                    </article>
+                </Fade>
+                )
+
+            }}
+        </FlavorContext.Consumer>
     )
 }
 

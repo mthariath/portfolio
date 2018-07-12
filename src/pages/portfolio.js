@@ -1,15 +1,10 @@
 import React from 'react'
-import { Link, StaticQuery } from 'gatsby'
-import { Fade } from 'react-reveal'
+import { StaticQuery } from 'gatsby'
 
 
 import Layout from '../components/layout'
 import PortfolioPageListing from '../components/PageComponents/PortfolioPageListing'
 import ArticleGrid from '../components/PageComponents/ArticleGrid'
-
-// const PortfolioPage = ( props ) => (
-
-// )
 
 const PortfolioPage = (props) => {
 
