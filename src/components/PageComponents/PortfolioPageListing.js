@@ -21,9 +21,9 @@ const PortfolioPageListing = ({project})=>{
                             <h3 css={{textTransform: 'uppercase', fontSize: '1rem'}}>{project.frontmatter.title}</h3>
                             <p css={{fontSize: '.9rem'}}>{project.excerpt}</p>
                             <div css={{
-                                margin: '0.5rem 0'
+                                margin: '0.3rem 0'
                             }}>
-                                {project.frontmatter.scope.map(scope => <Chip key={scope}>{scope}</Chip>)}
+                                {project.frontmatter.scope.map(scope => <Chip margin key={scope}>{scope}</Chip>)}
                             </div>
                             <div css={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}><Button>Read More</Button></div>
                         </div >

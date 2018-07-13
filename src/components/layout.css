@@ -1,5 +1,157 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster+Two:400,700|Raleway:300,800');
 
+
+/* ICON FONT START */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('~/fonts/icomoon.eot?rc42ks');
+  src:  url('~/fonts/icomoon.eot?rc42ks#iefix') format('embedded-opentype'),
+    url('~/fonts/icomoon.ttf?rc42ks') format('truetype'),
+    url('~/fonts/icomoon.woff?rc42ks') format('woff'),
+    url('~/fonts/icomoon.svg?rc42ks#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-netlify:before {
+  content: "\e91d";
+  color: #00c7b7;
+}
+.icon-heroku:before {
+  content: "\e913";
+  color: #430098;
+}
+.icon-amazon:before {
+  content: "\e914";
+  color: #f90;
+}
+.icon-docker:before {
+  content: "\e915";
+  color: #1488c6;
+}
+.icon-stripe:before {
+  content: "\e916";
+  color: #008cdd;
+}
+.icon-firebase:before {
+  content: "\e917";
+  color: #ffca28;
+}
+.icon-mongodb:before {
+  content: "\e918";
+  color: #47a248;
+}
+.icon-php:before {
+  content: "\e919";
+  color: #777bb4;
+}
+.icon-ruby:before {
+  content: "\e91a";
+  color: #cc342d;
+}
+.icon-npm:before {
+  content: "\e91b";
+  color: #cb3837;
+}
+.icon-gatsby:before {
+  content: "\e91c";
+  color: #639;
+}
+.icon-linux:before {
+  content: "\e900";
+  color: #fcc624;
+}
+.icon-trello:before {
+  content: "\e901";
+  color: #0079bf;
+}
+.icon-gulp:before {
+  content: "\e902";
+  color: #da4648;
+}
+.icon-adobephotoshop:before {
+  content: "\e903";
+  color: #00c8ff;
+}
+.icon-adobeindesign:before {
+  content: "\e904";
+  color: #fd3f93;
+}
+.icon-adobeillustrator:before {
+  content: "\e905";
+  color: #ff7c00;
+}
+.icon-googleanalytics:before {
+  content: "\e906";
+  color: #ffc107;
+}
+.icon-graphql:before {
+  content: "\e907";
+  color: #e10098;
+}
+.icon-vuejs:before {
+  content: "\e908";
+  color: #4fc08d;
+}
+.icon-webpack:before {
+  content: "\e909";
+  color: #8dd6f9;
+}
+.icon-python:before {
+  content: "\e90a";
+  color: #3776ab;
+}
+.icon-git:before {
+  content: "\e90b";
+  color: #f05032;
+}
+.icon-github:before {
+  content: "\e90c";
+}
+.icon-react:before {
+  content: "\e90d";
+  color: #61dafb;
+}
+.icon-sass:before {
+  content: "\e90e";
+  color: #c69;
+}
+.icon-html5:before {
+  content: "\e90f";
+  color: #e34f26;
+}
+.icon-css3:before {
+  content: "\e910";
+  color: #1572b6;
+}
+.icon-javascript:before {
+  content: "\e911";
+  color: #f7df1e;
+}
+.icon-nodejs:before {
+  content: "\e912";
+  color: #393;
+}
+.icon-terminal:before {
+  content: "\ea81";
+}
+/* ICON FONT END */
+
 .example-enter {
   opacity: 0.01;
 }

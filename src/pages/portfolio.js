@@ -47,18 +47,23 @@ const PortfolioPage = (props) => {
             <ArticleGrid title='My Work'>
                 <div css={{
                   gridArea: 'intro',
-                  display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-evenly',
+                  gridGap: '2rem',
                   alignItems: 'center',
                   display: 'grid',
+                  padding: '0.25rem',
                   gridTemplateColumns: 'repeat(auto-fill, minmax(45%, 1fr))',
                   gridAutoRows: '1fr',
                   '@media (max-width: 1024px)': {
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(90%, 1fr))'
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(90%, 1fr))',
+                  },
+                  '@media (min-width:1024px) and (max-width: 1800px)': {
+                    padding: '1rem'
                   },
                   '@media (min-width: 1800px)': {
-                    gridGap: '4rem'
+                    gridGap: '4rem',
+                    padding: '2rem'
                   }
                 }}>
                   {projects.map(({node})=>(<PortfolioPageListing project={node} key={node.id} />))}

@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from './Title'
+import IconGrid from './IconGrid'
 
 const TitleBox = ( props ) => {
     const css = {
@@ -10,26 +11,18 @@ const TitleBox = ( props ) => {
         alignItems: 'center',
         justifyContent: 'center',
         padding: '1rem', 
-        margin: '4rem 6vw'
+        margin: '4rem 6vw',
+        '@media (max-width: 1024px)': {
+            padding: '0.5rem'
+        }
     }
 
-    const innerCss = props.grid ? {
-      alignSelf: 'stretch',
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'space-evenly',
-      alignItems: 'center',
-      padding: '2rem 1rem',
-      '& *': {
-          margin: '.5rem'
-      }
-      
-    } : {padding: '2rem 1rem'};
+    const innerCss ={padding: '2rem 1rem', alignSelf: 'stretch'};
     return (
         <div css={css}>
             <Title size='6' underline>{props.title}</Title>
             <div css={innerCss}>
-                {props.children}
+                {props.grid ? <IconGrid flex>{props.children}</IconGrid> : props.children}
             </div>
         </div>
     )
