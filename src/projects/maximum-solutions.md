@@ -3,7 +3,7 @@ path: "/maximum-solutions"
 date: "2017-07-12T17:12:33.962Z"
 title: "Company Website and Branding"
 client: "Maximum Solutions Group"
-scope: "Design, branding/copywriting, development, maintenance."
+scope: ["Design", "Branding/Copywriting", "Web Development & Maintenance"]
 technology: ['Node.JS', 'Prismic Headless CMS']
 image: "./max-solutions.png"
 

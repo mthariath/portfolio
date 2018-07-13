@@ -1,13 +1,13 @@
 .Wrapper {
-    max-width: 600px;
-    min-width: 60%;
+    /* max-width: 400px;
+    min-width: 40%; */
     margin: 1rem;
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
     position: relative;
     filter: brightness(0.9);
 }
 
-.Wrapper, .Wrapper * {
+.Wrapper, .Wrapper > * {
     transition: all 0.5s .2s cubic-bezier(.82,.22,.44,1.52);
 }
 
@@ -21,7 +21,7 @@
 .DescriptionBox {
     transform: translateY(-100%);
     position: absolute;
-    padding: 2rem 1.5rem;
+    padding: 1rem 1rem;
     box-sizing: border-box;
     width: 90%;
     margin: 0 5%;
@@ -31,18 +31,20 @@
     opacity: 0;
 }
 
-.Wrapper:hover .DescriptionBox {
+.Wrapper:hover .DescriptionBox, .Wrapper:focus .DescriptionBox, .Wrapper:active .DescriptionBox {
     transform: translateY(-1rem);
     opacity: 1;
     transition: all 0.3s .25s cubic-bezier(.82,.22,.44,1.32);
+    outline: none;
 }
-.Wrapper:hover > * {
+.Wrapper:hover > *, .Wrapper:focus > *, .Wrapper:active > * {
     transform: scale(1.05) translateY(-01rem);
     transition: all 0.5s 0s cubic-bezier(.82,.22,.44,1.52);
 }
 
-.Wrapper:hover {
+.Wrapper:hover, .Wrapper:focus, .Wrapper:active {
     z-index: 100;
     filter: brightness(1);
     transition: all 0.5s 0s cubic-bezier(.82,.22,.44,1.52);
+    outline: none;
 }

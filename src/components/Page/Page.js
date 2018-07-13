@@ -25,7 +25,7 @@ class Page extends Component {
                         <Background />
                         <Logo />
                         <Nav location = {this.props.location} />
-                        <div style={{gridArea: 'main'}} className = {this.props.mainClass}>
+                        <div style={{gridArea: 'main', zIndex: '100'}} className = {this.props.mainClass}>
                             {this.props.children}
                         </div>
                         <Footer />

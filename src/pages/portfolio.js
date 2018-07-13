@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 
 
 import Layout from '../components/layout'
@@ -18,7 +18,7 @@ const PortfolioPage = (props) => {
             ) {
               edges {
                 node {
-                  excerpt(pruneLength: 250)
+                  excerpt(pruneLength: 50)
                   html
                   id
                   frontmatter {
@@ -30,7 +30,7 @@ const PortfolioPage = (props) => {
                     image {
                       childImageSharp {
                         sizes(maxWidth: 800) {
-                          ...GatsbyImageSharpSizes_tracedSVG
+                          ...GatsbyImageSharpSizes
                         }
                       }
                     }
@@ -51,8 +51,14 @@ const PortfolioPage = (props) => {
                   flexDirection: 'column',
                   justifyContent: 'space-evenly',
                   alignItems: 'center',
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(45%, 1fr))',
+                  gridAutoRows: '1fr',
+                  '@media (max-width: 1024px)': {
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(90%, 1fr))'
+                  },
                   '@media (min-width: 1800px)': {
-                    
+                    gridGap: '4rem'
                   }
                 }}>
                   {projects.map(({node})=>(<PortfolioPageListing project={node} key={node.id} />))}

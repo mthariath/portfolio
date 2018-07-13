@@ -2,8 +2,9 @@ import React from 'react'
 import Img from 'gatsby-image'
 import {Fade} from 'react-reveal'
 import {FlavorContext, flavors} from '../../Utils/FlavorContext'
-import Title from './Title'
 import classes from './PortfolioPageListing.module.css'
+import Button from '../Button/Button'
+import Chip from '../Chip'
 
 const PortfolioPageListing = ({project})=>{
     return (
@@ -14,12 +15,17 @@ const PortfolioPageListing = ({project})=>{
                 }
                 return (
                 <Fade bottom>
-                    <article className={classes.Wrapper}>
-                        <Img sizes={project.frontmatter.image.childImageSharp.sizes} />
+                    <article tabIndex="0" className={classes.Wrapper}>
+                        <Img sizes={{...project.frontmatter.image.childImageSharp.sizes, aspectRatio: 1.618/1}} />
                         <div css={descCss} className={classes.DescriptionBox}>
-                            <Title size='6'>{project.frontmatter.title}</Title>
-                            <Title size='6'>{project.frontmatter.title}</Title>
-                            <Title size='6'>{project.frontmatter.title}</Title>
+                            <h3 css={{textTransform: 'uppercase', fontSize: '1rem'}}>{project.frontmatter.title}</h3>
+                            <p css={{fontSize: '.9rem'}}>{project.excerpt}</p>
+                            <div css={{
+                                margin: '0.5rem 0'
+                            }}>
+                                {project.frontmatter.scope.map(scope => <Chip key={scope}>{scope}</Chip>)}
+                            </div>
+                            <div css={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}><Button>Read More</Button></div>
                         </div >
                     </article>
                 </Fade>

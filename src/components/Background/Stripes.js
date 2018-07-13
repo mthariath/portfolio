@@ -37,7 +37,8 @@ const Stripes = ( props ) => {
                             width: '100%',
                             height: '100%',
                             top: '0',
-                            left: '0'
+                            left: '0',
+                            transform: props.flip ? 'scaleX(-1) scaleY(-1)' : 'none'
                         }}>
                             <svg preserveAspectRatio="xMaxYMin slice" xmlns="http://www.w3.org/2000/svg" style={{isolation: 'isolate', position: 'absolute', right: '0', top: '0'}} viewBox="0 0 1280 800"  width='150vw'>
                             <defs>

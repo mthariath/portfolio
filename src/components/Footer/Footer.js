@@ -1,5 +1,7 @@
 import React from 'react';
 import {FlavorContext, flavors} from '../../Utils/FlavorContext'
+import Logo from '../Logo/Logo'
+import Stripes from '../Background/Stripes'
 // import classes from './Footer.module.css';
 // import Button from '../Button/Button';
 // import {Link} from 'gatsby'
@@ -10,9 +12,19 @@ const Footer = ( props ) => (
         return (
             <footer style={{
                 gridArea: 'footer',
-                backgroundColor: flavors[flavor].pale
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: flavors[flavor].pale,
+                padding: '3rem',
+                marginTop: '2rem',
+                position: 'relative',
+                overflow: 'hidden'
             }}>
-                Hi there!!!!
+                <Stripes flip/>
+                <div css={{'@media (max-width: 1024px)': {width: '10vw'}, width: '5vw'}}><Logo /></div>
+                <p>&copy;&nbsp;{(new Date()).getFullYear()}</p>
             </footer>
         )
     }}

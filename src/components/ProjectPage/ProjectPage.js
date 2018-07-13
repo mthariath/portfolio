@@ -5,7 +5,7 @@ import Layout from '../layout'
 const ProjectPage = ({children, location}) => {
     return (
         <Layout location={location}>
-            {children}
+            hithere
         </Layout>
     )
 }

@@ -30,7 +30,7 @@ class Background extends Component {
                 }
                 return (
                         <div css={css}>
-                            <Stripes colors={colors} />
+                            <Stripes />
                         </div>
                 )
             }}

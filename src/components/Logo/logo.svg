@@ -1,10 +1,1 @@
-<?xml version="1.0" standalone="no"?><!-- Generator: Gravit.io -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 544.535 881.575" width="544.535" height="881.575">
-  <g id="logo">
-    <rect x="0" y="0" width="544.535" height="881.575" transform="matrix(1,0,0,1,0,0)" fill="rgb(0,0,0)"/>
-    <path d=" M 432.856 69.827 L 111.679 69.827 L 273.364 254.733 L 432.856 69.827 Z " fill="rgb(130,213,196)"/>
-    <path d=" M 73.919 114.834 L 73.919 440.787 L 470.617 440.787 L 470.617 114.834 L 273.352 340.216 L 73.919 114.834 Z " fill="rgb(206,239,218)" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
-    <rect x="73.919" y="516.771" width="165.061" height="294.977" transform="matrix(1,0,0,1,0,0)" fill="rgb(169,221,201)"/>
-    <rect x="305.556" y="516.771" width="165.061" height="294.977" transform="matrix(1,0,0,1,0,0)" fill="rgb(123,255,227)"/>
-  </g>
-</svg>
+<?xml version="1.0" standalone="no"?><!-- Generator: Gravit.io --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 541.417 878.74" width="541.417" height="878.74"><defs><clipPath id="_clipPath_dIFhfTRKRFX8oPzgSRKU6tTFCl6z3zTf"><rect width="541.417" height="878.74"/></clipPath></defs><g clip-path="url(#_clipPath_dIFhfTRKRFX8oPzgSRKU6tTFCl6z3zTf)"><g id="logo"><rect x="0" y="0" width="544.535" height="881.575" transform="matrix(1,0,0,1,0,0)" fill="rgb(0,0,0)"/><path d=" M 432.856 69.827 L 111.679 69.827 L 273.364 254.733 L 432.856 69.827 Z " fill="rgb(130,213,196)"/><path d=" M 73.919 114.834 L 73.919 440.787 L 470.617 440.787 L 470.617 114.834 L 273.352 340.216 L 73.919 114.834 Z " fill="rgb(206,239,218)" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><rect x="73.919" y="516.771" width="165.061" height="294.977" transform="matrix(1,0,0,1,0,0)" fill="rgb(169,221,201)"/><rect x="305.556" y="516.771" width="165.061" height="294.977" transform="matrix(1,0,0,1,0,0)" fill="rgb(123,255,227)"/></g></g></svg>
