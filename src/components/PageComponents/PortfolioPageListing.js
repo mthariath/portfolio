@@ -5,6 +5,7 @@ import {FlavorContext, flavors} from '../../Utils/FlavorContext'
 import classes from './PortfolioPageListing.module.css'
 import Button from '../Button/Button'
 import Chip from '../Chip'
+import Toggle from '../../Utils/Toggle'
 
 const PortfolioPageListing = ({project})=>{
     return (
@@ -25,7 +26,15 @@ const PortfolioPageListing = ({project})=>{
                             }}>
                                 {project.frontmatter.scope.map(scope => <Chip margin key={scope}>{scope}</Chip>)}
                             </div>
-                            <div css={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}><Button>Read More</Button></div>
+                            <Toggle>
+                                {({visible, toggle}) => (
+                                    <div css={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}>
+                                        {visible && 'hiii'}
+                                        <Button onClick={toggle}>Read More</Button>
+
+                                    </div>
+                                )}
+                            </Toggle>
                         </div >
                     </article>
                 </Fade>
