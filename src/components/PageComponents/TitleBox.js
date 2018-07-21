@@ -10,7 +10,7 @@ const TitleBox = ( props ) => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '1rem', 
+        padding: '2rem 3rem', 
         margin: '4rem 6vw',
         '@media (max-width: 1024px)': {
             padding: '0.5rem'

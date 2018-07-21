@@ -31,6 +31,7 @@ const AboutPage = ( props ) => {
                   <Icon type='npm'>NPM</Icon>
                   <Icon type='sass'>SASS</Icon>
                   <Icon type='react'>React</Icon>
+                  <Icon type='gulp'>Gulp</Icon>
                   <Icon type='mongo'>MongoDB</Icon>
                   <Icon type='gatsby'>GatsbyJS</Icon>
                   <Icon type='graphql'>GraphQL</Icon>
@@ -64,7 +65,7 @@ const AboutPage = ( props ) => {
               </div>
 
             </TitleBox>
-            <Paragraph>Outside of the realm of 1's and 0's, I have a deep passion for woodworking and music.  I also enjoy cooking very much, though mostly for others more than myself.</Paragraph>
+            <Paragraph>Outside of the realm of 1's and 0's, I have a deep passion for woodworking and music - I will have some cool projects to share soon enough.  I also enjoy cooking very much, though mostly for others more than myself.</Paragraph>
             <Paragraph>Professionally, I am currently freelancing while building up my skills to prepare for the right opportunity.  Ideally, I would like to join a developer-oriented team and use my skills to create large-scale applications.</Paragraph>
             <Paragraph>I'm always looking for cool projects to contribute to.  Please don't hesitate to reach out if there's anything I can help with.</Paragraph>
             <Paragraph>-Mike</Paragraph>

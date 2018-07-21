@@ -53,7 +53,7 @@ const Icon = ({children, type}) => {
     }
     return (
         <div css={wrapperCss}>
-            <span class={iconClass} />
+            <span className={iconClass} />
             {children && <Chip>{children}</Chip>}
         </div>
     )
