@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {FlavorContext, flavors} from '../../Utils/FlavorContext'
-import Stripes from './Stripes'
+import {Stripes} from './Stripes'
 
 
 class Background extends Component {
@@ -41,4 +41,4 @@ class Background extends Component {
     }
 }
 
-export default Background;
+export {Background};

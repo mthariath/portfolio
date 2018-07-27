@@ -1,7 +1,7 @@
 import React from 'react';
 import {FlavorContext, flavors} from '../../Utils/FlavorContext'
 import Logo from '../Logo/Logo'
-import Stripes from '../Background/Stripes'
+import {Stripes} from '../Elements'
 // import classes from './Footer.module.css';
 // import Button from '../Button/Button';
 // import {Link} from 'gatsby'

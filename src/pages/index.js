@@ -2,7 +2,7 @@ import React from 'react'
 import ArticleGrid from '../components/PageComponents/ArticleGrid'
 import Paragraph from '../components/PageComponents/Paragraph'
 import TitleBox from '../components/PageComponents/TitleBox'
-import Button from '../components/Button/Button'
+import { Button }from '../components/Elements'
 import classes from './index.module.css'
 
 import Layout from '../components/layout'

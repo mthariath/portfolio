@@ -75,4 +75,4 @@ class Stripes extends Component {
     }
 }
 
-export default Stripes;
+export { Stripes };

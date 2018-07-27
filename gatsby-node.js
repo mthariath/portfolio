@@ -59,3 +59,13 @@
 //      )
 //    })
 //  }
+
+exports.setWebpackConfig = function({config, env}) {
+    config.merge({
+      resolve: {
+        root: path.resolve(__dirname, './src/components/'),
+        extensions: ['', '.js', '.jsx', '.json'],
+      }
+    });
+    return config;
+  }

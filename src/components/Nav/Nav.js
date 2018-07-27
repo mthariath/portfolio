@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Nav.module.css';
-import Button from '../Button/Button';
+import {Button} from '../Elements';
 
 const Nav = ( props ) => (
     <ul className={classes.Nav}>

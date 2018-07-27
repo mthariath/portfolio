@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import LayoutGrid from '../LayoutGrid/LayoutGrid'
 import Nav from '../Nav/Nav'
 import Logo from '../Logo/Logo'
-import Background from '../Background/Background'
+import {Background} from '../Elements'
 import Footer from '../Footer/Footer'
 import {Fade} from 'react-reveal'
 
