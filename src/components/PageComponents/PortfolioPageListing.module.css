@@ -19,7 +19,7 @@
 .DescriptionBox {
     transform: translateY(-100%);
     position: absolute;
-    padding: 1rem 1rem;
+    padding: 1.5rem 1rem;
     box-sizing: border-box;
     width: 90%;
     margin: 0 5%;

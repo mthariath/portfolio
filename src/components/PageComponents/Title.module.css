@@ -7,8 +7,14 @@
     user-select: none;
 }
 
+
 .Title4, .Title5, .Title6 {
     font-weight: inherit;
+}
+.Sans {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
 }
 @media (max-width: 1024px) {
     .Title1 {
@@ -49,7 +55,7 @@
         font-size: 1.75rem;
     }
     .Title6 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
     
@@ -72,7 +78,7 @@
         font-size: 2rem;
     }
     .Title6 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     
