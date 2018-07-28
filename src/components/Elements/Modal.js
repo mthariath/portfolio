@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
+import { Transition, animated } from 'react-spring'
 
 
 
@@ -30,9 +31,8 @@ class Modal extends React.Component {
   }
 
   render() {
-    console.log(`opacity: ${this.props.styles.backdropOpacity}`)
     const Backdrop = ({children, toggle}) => (
-        <div onClick={toggle} css={{
+        <animated.div onClick={toggle} style={{
             position: 'fixed',
             top: 0,
             left: 0,
@@ -40,17 +40,19 @@ class Modal extends React.Component {
             right: 0,
             width: '100vw',
             height: '100vh',
-            background: `rgba(0, 0, 0, ${this.props.styles.backdropOpacity})`,
+            background: this.props.styles.opacity.interpolate (o => `rgba(0, 0, 0, ${o/3})` ) ,
             pointerEvents: this.props.styles.pointerEvents
         }}
         >
+          <div>
             {children}
-        </div>
+          </div>
+        </animated.div>
         
     )
 
     return ReactDOM.createPortal(
-      <Backdrop style={{color: 'white'}}  toggle={this.props.toggle}>asdf</Backdrop>,
+      <Backdrop style={{color: 'white'}}  toggle={this.props.toggle}>{this.props.children}</Backdrop>,
       this.el,
     );
   }
