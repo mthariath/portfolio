@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import {Background, Footer, Logo, Nav} from '../Elements'
 import {LayoutGrid} from '../Layout'
 import {Fade} from 'react-reveal'
@@ -22,7 +23,7 @@ class Page extends Component {
                         <Background />
                         <Logo />
                         <Nav location = {this.props.location} />
-                        <div style={{gridArea: 'main', zIndex: '100'}} className = {this.props.mainClass}>
+                        <div style={{gridArea: 'main', zIndex: '100'}} >
                             {this.props.children}
                         </div>
                         <Footer />
@@ -31,6 +32,11 @@ class Page extends Component {
             </FlavorContext.Provider>
         )
     }
+}
+
+Page.propTypes = {
+    location: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired
 }
 
 export {Page};

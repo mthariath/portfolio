@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import PropTypes from 'prop-types'
 
 class Toggle extends Component {
     state = {
@@ -18,6 +19,10 @@ class Toggle extends Component {
                     toggle: this.handleToggle
                 });
     }
+}
+
+Toggle.propTypes = {
+    children: PropTypes.func.isRequired
 }
 
 export {Toggle} 

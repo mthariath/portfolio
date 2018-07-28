@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types'
 import {FlavorContext, flavors} from '../Utils'
 import ReactTransitionGroup from 'react-addons-transition-group'
 
@@ -73,6 +74,10 @@ class Stripes extends Component {
             </FlavorContext.Consumer>
         )
     }
+}
+
+Stripes.propTypes = {
+    flip: PropTypes.bool
 }
 
 export { Stripes };

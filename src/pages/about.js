@@ -15,7 +15,7 @@ const AboutPage = ( props ) => {
 
             <TitleBox>
               <div css={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-                <Title size='5' underline>skills</Title>
+                <Title size = {5} underline>skills</Title>
                 
                 <IconGrid>
                   <Icon type='html'>HTML5</Icon>
@@ -34,7 +34,7 @@ const AboutPage = ( props ) => {
                   <Icon type='indesign'>InDesign</Icon>
                   <Icon type='illustrator'>Illustrator</Icon>
                 </IconGrid>
-                <Title size='5' underline>tools</Title>
+                <Title size = {5} underline>tools</Title>
                 <IconGrid>
                   <Icon type='linux'>Linux</Icon>
                   <Icon type='terminal'>CLI</Icon>
@@ -45,7 +45,7 @@ const AboutPage = ( props ) => {
                   <Icon type='trello'>Trello</Icon>
                 </IconGrid>
                  {/* eslint-disable-next-line  */}
-                <Title size='5' underline>/* todo */</Title>
+                <Title size = {5} underline>/* todo */</Title>
                 <IconGrid>
                   <Icon type='python'>Python</Icon>
                   <Icon type='webpack'>Webpack</Icon>

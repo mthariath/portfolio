@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {Title} from '../Elements'
 import {IconGrid} from '../Layout'
 
@@ -20,12 +21,19 @@ const TitleBox = ( props ) => {
     const innerCss ={padding: '2rem 1rem', alignSelf: 'stretch'};
     return (
         <div css={css}>
-            <Title size='6' underline>{props.title}</Title>
+            {props.title && <Title size={6} underline>{props.title}</Title>}
+            
             <div css={innerCss}>
                 {props.grid ? <IconGrid flex>{props.children}</IconGrid> : props.children}
             </div>
         </div>
     )
+}
+
+TitleBox.propTypes = {
+    grid: PropTypes.bool,
+    title: PropTypes.string,
+    children: PropTypes.node.isRequired
 }
 
 export {TitleBox};

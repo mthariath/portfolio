@@ -1,5 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {FlavorContext, flavors} from '../Utils'
+
 
 const Chip = ({children, margin}) => {
     return (
@@ -24,6 +26,11 @@ const Chip = ({children, margin}) => {
         </FlavorContext.Consumer>
     )
     
+}
+
+Chip.propTypes = {
+    children: PropTypes.node.isRequired,
+    margin: PropTypes.bool
 }
 
 export {Chip}

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {Chip} from './Chip'
 
 const Icon = ({children, type}) => {
@@ -57,6 +58,11 @@ const Icon = ({children, type}) => {
             {children && <Chip>{children}</Chip>}
         </div>
     )
+}
+
+Icon.propTypes = {
+    children: PropTypes.node,
+    type: PropTypes.string.isRequired
 }
 
 
