@@ -1,5 +1,5 @@
 import React from 'react'
-import {FlavorContext, flavors} from '../Utils/FlavorContext'
+import {FlavorContext, flavors} from '../Utils'
 
 const Chip = ({children, margin}) => {
     return (
@@ -26,4 +26,4 @@ const Chip = ({children, margin}) => {
     
 }
 
-export default Chip
+export {Chip}

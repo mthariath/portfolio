@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Title.module.css'
-import {FlavorContext, flavors} from '../../Utils/FlavorContext'
+import {FlavorContext, flavors} from '../Utils'
 
 const Title = ( props ) => {
     return (
@@ -41,4 +41,4 @@ const Title = ( props ) => {
     </FlavorContext.Consumer>)
 }
 
-export default Title;
+export {Title};

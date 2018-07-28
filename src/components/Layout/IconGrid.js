@@ -34,4 +34,4 @@ const IconGrid = ({flex, children}) => {
     )
 }
 
-export default IconGrid
+export {IconGrid}

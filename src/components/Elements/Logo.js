@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlavorContext, flavors} from '../../Utils/FlavorContext'
+import {FlavorContext, flavors} from '../Utils'
 
 const Logo = ( props ) => {
     return (
@@ -38,4 +38,4 @@ const Logo = ( props ) => {
     )
 }
 
-export default Logo;
+export {Logo};

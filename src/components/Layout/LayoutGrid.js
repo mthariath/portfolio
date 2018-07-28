@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './LayoutGrid.module.css';
-import {FlavorContext, flavors} from '../../Utils/FlavorContext'
+import {FlavorContext, flavors} from '../Utils'
 
   
 
@@ -24,4 +24,4 @@ function LayoutGrid(props) {
 	)
 };
 
-export default LayoutGrid;
+export {LayoutGrid};

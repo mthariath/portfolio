@@ -2,9 +2,8 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
 
-import Layout from '../components/layout'
-import PortfolioPageListing from '../components/PageComponents/PortfolioPageListing'
-import ArticleGrid from '../components/PageComponents/ArticleGrid'
+import {ArticleGrid, Layout} from '../components/Layout'
+import {PortfolioPageListing} from '../components/Elements'
 
 const PortfolioPage = (props) => {
 

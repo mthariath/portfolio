@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FlavorContext, flavors} from '../../Utils/FlavorContext'
+import {FlavorContext, flavors} from '../Utils'
 import ReactTransitionGroup from 'react-addons-transition-group'
 
 function FirstChild(props) {

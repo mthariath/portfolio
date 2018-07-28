@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const flavors = {
+const flavors = {
     teal: {
       main: 'hsl(174, 74%, 75%)',
       button: 'hsl(167, 49%, 65%)',
@@ -35,6 +35,8 @@ export const flavors = {
     },
   };
 
-  export const FlavorContext = React.createContext(
-    flavors.teal // default value
-  );
+const FlavorContext = React.createContext(
+  flavors.teal // default value
+);
+
+export {FlavorContext, flavors}

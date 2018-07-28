@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {FlavorContext, flavors} from '../../Utils/FlavorContext'
+import {FlavorContext, flavors} from '../Utils'
 import {Stripes} from './Stripes'
 
 

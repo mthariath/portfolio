@@ -1,5 +1,5 @@
 import React from 'react'
-import Title from './Title'
+import {Title} from '../Elements'
 
 const TitleBlock = ( {title, subtitle} ) => {
     return (
@@ -10,4 +10,4 @@ const TitleBlock = ( {title, subtitle} ) => {
     )
 }
 
-export default TitleBlock
+export {TitleBlock}

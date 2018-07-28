@@ -1,6 +1,6 @@
 import React from 'react'
-import Title from './Title'
-import IconGrid from './IconGrid'
+import {Title} from '../Elements'
+import {IconGrid} from '../Layout'
 
 const TitleBox = ( props ) => {
     const css = {
@@ -28,4 +28,4 @@ const TitleBox = ( props ) => {
     )
 }
 
-export default TitleBox;
+export {TitleBox};

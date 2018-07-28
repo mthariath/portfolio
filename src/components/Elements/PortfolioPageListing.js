@@ -1,14 +1,10 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import {Fade} from 'react-reveal'
-import {FlavorContext, flavors} from '../../Utils/FlavorContext'
+import {FlavorContext, flavors} from '../Utils'
 import classes from './PortfolioPageListing.module.css'
-import {Button} from '../Elements'
-import Chip from '../Chip'
-import Toggle from '../../Utils/Toggle'
-import Modal from '../Modal/Modal'
-import Title from './Title'
-import Paragraph from './Paragraph'
+import {Button, Modal, Paragraph, Title, Chip} from '../Elements'
+import {Toggle} from '../Utils'
 import { Transition } from 'react-spring'
 
 
@@ -69,4 +65,4 @@ const PortfolioPageListing = ({project})=>{
     )
 }
 
-export default PortfolioPageListing
+export {PortfolioPageListing}

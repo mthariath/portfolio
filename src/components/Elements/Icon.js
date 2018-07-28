@@ -1,5 +1,5 @@
 import React from 'react'
-import Chip from '../Chip'
+import {Chip} from './Chip'
 
 const Icon = ({children, type}) => {
     const icons = [
@@ -61,4 +61,4 @@ const Icon = ({children, type}) => {
 
 
 
-export default Icon
+export {Icon}

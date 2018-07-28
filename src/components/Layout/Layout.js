@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import favicon from '../favicon.png'
+import favicon from '../../favicon.png'
 
-import Page from './Page/Page'
-import './layout.css'
+import {Page} from '../Elements'
+import './Layout.css'
 
 
 
@@ -34,4 +34,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export {Layout}

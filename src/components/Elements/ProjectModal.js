@@ -1,8 +1,8 @@
 import React from 'react'
-import Modal from '../Modal/Modal'
+import {Modal} from '../Elements'
 
 const ProjectModal = ( props ) => {
     return (<Modal />)
 }
 
-export default ProjectModal
+export {ProjectModal}

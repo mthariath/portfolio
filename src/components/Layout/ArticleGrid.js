@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './ArticleGrid.module.css'
-import TitleBlock from './TitleBlock'
+import {TitleBlock} from '../Elements'
 import { Fade } from 'react-reveal'
 
 const ArticleGrid = ( {children, title, subtitle, transition} ) => {
@@ -19,4 +19,4 @@ const ArticleGrid = ( {children, title, subtitle, transition} ) => {
     )
 }
 
-export default ArticleGrid;
+export {ArticleGrid};

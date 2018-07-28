@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
+import {Layout} from '../components/Layout'
 
 const BlogPage = ( props ) => (
   <Layout location={props.location}>

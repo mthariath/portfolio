@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Button.module.css';
-import {FlavorContext, flavors} from '../../Utils/FlavorContext'
+import {FlavorContext, flavors} from '../Utils'
 import {Link} from 'gatsby'
 
 

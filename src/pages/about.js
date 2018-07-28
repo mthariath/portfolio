@@ -1,13 +1,7 @@
 import React from 'react'
-import ArticleGrid from '../components/PageComponents/ArticleGrid'
-import Paragraph from '../components/PageComponents/Paragraph'
-import TitleBox from '../components/PageComponents/TitleBox'
-import Icon from '../components/Icon/Icon'
+import {ArticleGrid, IconGrid, Layout} from '../components/Layout'
+import {Icon, Paragraph, Title, TitleBox} from '../components/Elements'
 import classes from './index.module.css'
-import Title from '../components/PageComponents/Title'
-import IconGrid from '../components/PageComponents/IconGrid'
-import Layout from '../components/layout'
-import {Fade} from 'react-reveal'
 
 const AboutPage = ( props ) => {
   
@@ -50,6 +44,7 @@ const AboutPage = ( props ) => {
                   <Icon type='netlify'>Netlify</Icon>
                   <Icon type='trello'>Trello</Icon>
                 </IconGrid>
+                 {/* eslint-disable-next-line  */}
                 <Title size='5' underline>/* todo */</Title>
                 <IconGrid>
                   <Icon type='python'>Python</Icon>

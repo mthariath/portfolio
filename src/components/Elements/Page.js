@@ -1,12 +1,9 @@
 import React, {Component} from 'react'
-import LayoutGrid from '../LayoutGrid/LayoutGrid'
-import Nav from '../Nav/Nav'
-import Logo from '../Logo/Logo'
-import {Background} from '../Elements'
-import Footer from '../Footer/Footer'
+import {Background, Footer, Logo, Nav} from '../Elements'
+import {LayoutGrid} from '../Layout'
 import {Fade} from 'react-reveal'
 
-import {FlavorContext} from '../../Utils/FlavorContext'
+import {FlavorContext} from '../Utils'
 
 
 class Page extends Component {
@@ -36,4 +33,4 @@ class Page extends Component {
     }
 }
 
-export default Page;
+export {Page};
