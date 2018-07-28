@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import classes from './Button.module.css';
 import {FlavorContext, flavors} from '../Utils'
 import {Link} from 'gatsby'
@@ -37,4 +38,16 @@ const Button = ( props ) => {
 
     );
 }
+
+Button.propTypes = {
+    color: PropTypes.string,
+    Large: PropTypes.bool,
+    Block: PropTypes.bool,
+    Small: PropTypes.bool,
+    Icon: PropTypes.bool,
+    Active: PropTypes.bool,
+    children: PropTypes.node.isRequired
+}
+
+
 export {Button};

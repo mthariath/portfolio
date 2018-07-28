@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import classes from './LayoutGrid.module.css';
 import {FlavorContext, flavors} from '../Utils'
 
@@ -23,5 +24,9 @@ function LayoutGrid(props) {
 		</FlavorContext.Consumer>
 	)
 };
+
+LayoutGrid.propTypes = {
+	children: PropTypes.node.isRequired
+}
 
 export {LayoutGrid};

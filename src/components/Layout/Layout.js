@@ -12,8 +12,8 @@ import './Layout.css'
 
 
 
-const Layout = ({ children, color, location, mainClass }) => (
-  <Page location = {location.pathname} mainClass = {mainClass}>
+const Layout = ({ children, location }) => (
+  <Page location = {location.pathname}>
     <Helmet>
       <title>Mike Thariath</title>
       <meta name='description' content='Sample' />
@@ -32,6 +32,7 @@ const Layout = ({ children, color, location, mainClass }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired
 }
 
 export {Layout}

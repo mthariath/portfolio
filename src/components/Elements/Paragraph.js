@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classes from './Paragraph.module.css'
 
 const Paragraph = ( {children, Small} ) => {
@@ -9,6 +10,11 @@ const Paragraph = ( {children, Small} ) => {
         </p>
         
     )
+}
+
+Paragraph.propTypes = {
+    Small: PropTypes.bool,
+    children: PropTypes.node.isRequired
 }
 
 export {Paragraph};

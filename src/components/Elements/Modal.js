@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
 
 
@@ -54,5 +55,11 @@ class Modal extends React.Component {
     );
   }
 }
+Modal.propTypes = {
+  styles: PropTypes.object.isRequired,
+  toggle: PropTypes.func.isRequired
+}
+
+
 
 export {Modal}

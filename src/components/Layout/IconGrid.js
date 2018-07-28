@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 
 const IconGrid = ({flex, children}) => {
@@ -32,6 +33,11 @@ const IconGrid = ({flex, children}) => {
                 {children}
             </div>
     )
+}
+
+IconGrid.propTypes = {
+    flex: PropTypes.bool,
+    children: PropTypes.node.isRequired
 }
 
 export {IconGrid}
