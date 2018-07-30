@@ -1,12 +1,12 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
+import { Transition } from 'react-spring'
 import {Fade} from 'react-reveal'
 import {FlavorContext, flavors} from '../Utils'
 import classes from './PortfolioPageListing.module.css'
-import {Button, Modal, Paragraph, Title, Chip} from '../Elements'
+import {Button, ProjectModal, Paragraph, Title, Chip} from '../Elements'
 import {Toggle} from '../Utils'
-import { Transition } from 'react-spring'
 
 
 
@@ -37,21 +37,13 @@ const PortfolioPageListing = ({project})=>{
                             <Toggle>
                                 {({visible, toggle}) => {
 
-                                    const Hello = (styles) => {
-                                        return (<Modal toggle={toggle} styles={styles}>{styles.opacity}</Modal>)
-                                    }            
+
                                                             
                                     return (
                                         <div css={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}>
                                             
                                             <Button onClick={toggle}>Read More</Button>
-                                            <Transition 
-                                            from={{ backdropOpacity: 0 }}
-                                            enter={{ backdropOpacity: .3}} 
-                                            leave={{ backdropOpacity: 0, pointerEvents: 'none' }}
-                                            >
-                                                {visible && Hello}
-                                                </Transition>
+                                             <ProjectModal visible = {visible} toggle = {toggle} project = {project}/>
                                         </div>
                                     )
                                 }}

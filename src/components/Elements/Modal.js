@@ -1,16 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import ReactDOM from 'react-dom'
+import React from "react";
+import PropTypes from "prop-types";
+import ReactDOM from "react-dom";
+import { Transition, animated } from "react-spring";
 
-
-
-
-const modalRoot = document.getElementById('modal-root');
+const modalRoot = document.getElementById("modal-root");
 
 class Modal extends React.Component {
   constructor(props) {
     super(props);
-    this.el = document.createElement('div');
+    this.el = document.createElement("div");
   }
 
   componentDidMount() {
@@ -30,36 +28,38 @@ class Modal extends React.Component {
   }
 
   render() {
-    console.log(`opacity: ${this.props.styles.backdropOpacity}`)
-    const Backdrop = ({children, toggle}) => (
-        <div onClick={toggle} css={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            bottom: 0, 
-            right: 0,
-            width: '100vw',
-            height: '100vh',
-            background: `rgba(0, 0, 0, ${this.props.styles.backdropOpacity})`,
-            pointerEvents: this.props.styles.pointerEvents
+    const Backdrop = ({ children, toggle }) => (
+      <animated.div
+        onClick={toggle}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 0,
+          width: "100vw",
+          height: "100vh",
+          background: this.props.styles.opacity.interpolate(
+            o => `rgba(0, 0, 0, ${o / 3})`
+          ),
+          pointerEvents: this.props.styles.pointerEvents
         }}
-        >
-            {children}
-        </div>
-        
-    )
+      >
+        <div>{children}</div>
+      </animated.div>
+    );
 
     return ReactDOM.createPortal(
-      <Backdrop style={{color: 'white'}}  toggle={this.props.toggle}>asdf</Backdrop>,
-      this.el,
+      <Backdrop style={{ color: "white" }} toggle={this.props.toggle}>
+        {this.props.children}
+      </Backdrop>,
+      this.el
     );
   }
 }
 Modal.propTypes = {
   styles: PropTypes.object.isRequired,
   toggle: PropTypes.func.isRequired
-}
+};
 
-
-
-export {Modal}
+export { Modal };
