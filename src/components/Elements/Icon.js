@@ -126,6 +126,22 @@ const icons = [
   {
     text: "GatsbyJS",
     code: "icon-gatsby"
+  },
+  {
+    text: "Solidworks",
+    code: "icon-solidworks"
+  },
+  {
+    text: "Slack",
+    code: "icon-slack"
+  },
+  {
+    text: "Z-Wave",
+    code: "icon-z-wave"
+  },
+  {
+    text: "Prismic CMS",
+    code: "icon-prismic-2"
   }
 ];
 
