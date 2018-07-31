@@ -10,7 +10,6 @@ class Modal extends React.Component {
     super(props);
     this.el = document.createElement("div");
   }
-
   componentDidMount() {
     // The portal element is inserted in the DOM tree after
     // the Modal's children are mounted, meaning that children
@@ -20,6 +19,7 @@ class Modal extends React.Component {
     // DOM node, or uses 'autoFocus' in a descendant, add
     // state to Modal and only render the children when Modal
     // is inserted in the DOM tree.
+    document.body.style.overflow = "hidden";
     modalRoot.appendChild(this.el);
   }
 
@@ -32,6 +32,8 @@ class Modal extends React.Component {
     const Backdrop = ({ children, toggle }) => (
       <animated.div
         onClick={toggle}
+        onKeyDown={toggle}
+        tabIndex="0"
         style={{
           position: "fixed",
           top: 0,

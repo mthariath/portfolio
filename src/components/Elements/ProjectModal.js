@@ -2,7 +2,7 @@ import React from "react";
 import Img from "gatsby-image";
 import { Transition, animated, Keyframes, config } from "react-spring";
 
-import { Modal, Title, TitleBox, Paragraph, Icon } from "../Elements";
+import { Modal, Title, TitleBox, Icon, Button, Chip } from "../Elements";
 import { IconGrid } from "../Layout";
 
 const ImgContainer = Keyframes.Transition({
@@ -61,7 +61,7 @@ const ProjectModal = ({ visible, toggle, project }) => {
             gridTemplateColumns: "1fr",
             gridTemplateRows: "35vh 60vh",
             position: "relative",
-            gridGap: "3vw",
+            gridGap: "1vw",
             padding: "2vw"
           }}
         >
@@ -75,6 +75,16 @@ const ProjectModal = ({ visible, toggle, project }) => {
               justifyContent: "center"
             }}
           >
+            <div
+              css={{
+                position: "fixed",
+                top: ".5rem",
+                right: "0.5rem",
+                zIndex: "1000"
+              }}
+            >
+              <Button Large>[close]</Button>
+            </div>
             <div onClick={e => e.stopPropagation()}>
               <Img
                 sizes={{
@@ -107,14 +117,37 @@ const ProjectModal = ({ visible, toggle, project }) => {
                 padding: "3vw",
                 boxSizing: "border-box"
               }}
+              onClick={e => e.stopPropagation()}
             >
-              <TitleBox>
-                <Title size={5} sans>
-                  {title}
-                </Title>
-                <IconGrid flex>
-                  {technology.map(tech => <Icon type={tech} key={tech} />)}
-                </IconGrid>
+              <TitleBox small>
+                <div
+                  css={{
+                    display: "flex",
+                    flexDirection: "row",
+                    "@media(max-width: 1024px)": {
+                      flexDirection: "column"
+                    }
+                  }}
+                >
+                  <div css={{ flex: "1" }}>
+                    <Title size={5} sans>
+                      {title}
+                    </Title>
+                    <Title size={6} sans>
+                      {client}
+                    </Title>
+                    {project.frontmatter.scope.map(scope => (
+                      <Chip margin key={scope}>
+                        {scope}
+                      </Chip>
+                    ))}
+                  </div>
+                  <div css={{ flex: "2" }}>
+                    <TitleBox grid small border title="tech">
+                      {technology.map(tech => <Icon type={tech} key={tech} />)}
+                    </TitleBox>
+                  </div>
+                </div>
               </TitleBox>
               <div dangerouslySetInnerHTML={{ __html: mainText }} />
             </div>
