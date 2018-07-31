@@ -68,6 +68,7 @@ const AboutPage = props => {
                 <Icon caption type="github" />
                 <Icon caption type="heroku" />
                 <Icon caption type="netlify" />
+                <Icon caption type="slack" />
                 <Icon caption type="trello" />
               </IconGrid>
               {/* eslint-disable-next-line  */}
