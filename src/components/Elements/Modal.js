@@ -24,6 +24,7 @@ class Modal extends React.Component {
   }
 
   componentWillUnmount() {
+    document.body.style.overflow = "auto";
     modalRoot.removeChild(this.el);
   }
 

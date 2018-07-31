@@ -1,59 +1,73 @@
 @media (max-width: 640px) {
-    .Paragraph {
+    .Paragraph,
+    p {
         font-size: 1rem;
         letter-spacing: 0.5px;
     }
-    .Paragraph.Small {
+    .Paragraph.Small,
+    p.Small {
         font-size: 0.8rem;
     }
 }
-@media (min-width: 640px) and (max-width: 800px) {
-    .Paragraph {
-        font-size: 1rem;
-        letter-spacing: 0.5px;
-    }
-    .Paragraph.Small {
-        font-size: 0.8rem;
-    }
 
+@media (min-width: 640px) and (max-width: 800px) {
+    .Paragraph,
+    p {
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+    }
+    .Paragraph.Small,
+    p.Small {
+        font-size: 0.8rem;
+    }
 }
+
 @media (min-width: 800px) and (max-width: 1024px) {
-    .Paragraph {
+    .Paragraph,
+    p {
         font-size: 1.4rem;
         letter-spacing: 1.8px;
     }
-    .Paragraph.Small {
+    .Paragraph.Small,
+    p.Small {
         font-size: 1rem;
     }
 }
+
 @media (min-width: 1024px) and (max-width: 1800px) {
-    .Paragraph {
+    .Paragraph,
+    p {
         font-size: 1.6rem;
         letter-spacing: 2px;
     }
-    .Paragraph.Small {
+    .Paragraph.Small,
+    p.Small {
         font-size: 1.1rem;
     }
-    
 }
+
 @media (min-width: 1800px) {
-    .Paragraph {
+    .Paragraph,
+    p {
         font-size: 2.0rem;
         letter-spacing: 3px;
         line-height: 1.3;
     }
-    .Paragraph.Small {
+    .Paragraph.Small,
+    p.Small {
         font-size: 1.2rem;
     }
 }
 
-.Paragraph {
+.Paragraph,
+p {
     line-height: 1.5;
     color: rgba(0, 0, 0, 0.8);
     font-family: 'Raleway', sans-serif;
 }
 
-.Paragraph.Small {
+.Paragraph.Small,
+p.Small {
     letter-spacing: 0;
     line-height: 1.1;
 }

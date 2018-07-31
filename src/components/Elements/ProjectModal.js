@@ -2,7 +2,8 @@ import React from "react";
 import Img from "gatsby-image";
 import { Transition, animated, Keyframes, config } from "react-spring";
 
-import { Modal, TitleBox } from "../Elements";
+import { Modal, Title, TitleBox, Paragraph, Icon } from "../Elements";
+import { IconGrid } from "../Layout";
 
 const ImgContainer = Keyframes.Transition({
   open: [
@@ -49,6 +50,8 @@ const ImgContainer = Keyframes.Transition({
 });
 
 const ProjectModal = ({ visible, toggle, project }) => {
+  const { title, client, scope, technology } = project.frontmatter;
+  const mainText = project.html;
   const ModalContent = styles => {
     return (
       <Modal toggle={toggle} styles={styles}>
@@ -56,9 +59,9 @@ const ProjectModal = ({ visible, toggle, project }) => {
           css={{
             display: "grid",
             gridTemplateColumns: "1fr",
-            gridTemplateRows: "35vh 65vh",
+            gridTemplateRows: "35vh 60vh",
             position: "relative",
-            gridGap: "2vw",
+            gridGap: "3vw",
             padding: "2vw"
           }}
         >
@@ -71,25 +74,27 @@ const ProjectModal = ({ visible, toggle, project }) => {
               alignItems: "center",
               justifyContent: "center"
             }}
-            onClick={e => e.stopPropagation()}
           >
-            <Img
-              sizes={{
-                ...project.frontmatter.image.childImageSharp.sizes,
-                aspectRatio: 1.618 / 1
-              }}
-              style={{
-                height: "35vh",
-                width: "calc(35vh*1.618)",
-                maxWidth: "96vw"
-              }}
-            />
+            <div onClick={e => e.stopPropagation()}>
+              <Img
+                sizes={{
+                  ...project.frontmatter.image.childImageSharp.sizes,
+                  aspectRatio: 1.618 / 1
+                }}
+                style={{
+                  height: "35vh",
+                  width: "calc(35vh*1.618)",
+                  maxWidth: "96vw"
+                }}
+              />
+            </div>
           </animated.div>
 
           <animated.div
             css={{
               padding: "0vw",
-              boxSizing: "border-box"
+              boxSizing: "border-box",
+              overflowY: "auto"
             }}
             style={{
               opacity: styles.descOpacity,
@@ -103,13 +108,15 @@ const ProjectModal = ({ visible, toggle, project }) => {
                 boxSizing: "border-box"
               }}
             >
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
+              <TitleBox>
+                <Title size={5} sans>
+                  {title}
+                </Title>
+                <IconGrid flex>
+                  {technology.map(tech => <Icon type={tech} key={tech} />)}
+                </IconGrid>
+              </TitleBox>
+              <div dangerouslySetInnerHTML={{ __html: mainText }} />
             </div>
           </animated.div>
         </div>
