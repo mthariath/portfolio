@@ -8,6 +8,7 @@ const Title = props => {
     <FlavorContext.Consumer>
       {flavor => {
         const css = {
+          padding: props.padding && props.padding,
           "&::after": {
             background: props.color
               ? flavors[props.color].button
@@ -80,6 +81,7 @@ Title.propTypes = {
   underline: PropTypes.bool,
   sans: PropTypes.bool,
   size: PropTypes.number,
+  padding: PropTypes.string,
   children: PropTypes.node.isRequired
 };
 

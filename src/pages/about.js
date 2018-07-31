@@ -37,7 +37,7 @@ const AboutPage = props => {
                 justifyContent: "center"
               }}
             >
-              <Title size={5} underline>
+              <Title padding="1.5rem 0 0" size={5} underline>
                 skills
               </Title>
 
@@ -58,7 +58,7 @@ const AboutPage = props => {
                 <Icon caption type="indesign" />
                 <Icon caption type="illustrator" />
               </IconGrid>
-              <Title size={5} underline>
+              <Title padding="1.5rem 0 0" size={5} underline>
                 tools
               </Title>
               <IconGrid>
@@ -72,7 +72,7 @@ const AboutPage = props => {
                 <Icon caption type="trello" />
               </IconGrid>
               {/* eslint-disable-next-line  */}
-                <Title size = {5} underline>/* todo */</Title>
+                <Title padding="1.5rem 0 0" size = {5} underline>/* todo */</Title>
               <IconGrid>
                 <Icon caption type="python" />
                 <Icon caption type="webpack" />

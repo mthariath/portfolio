@@ -11,7 +11,8 @@ const IconGrid = ({ flex, children }) => {
         alignItems: "center",
         padding: "0",
         "& *": {
-          margin: ".15rem"
+          margin: ".15rem",
+          flex: "1"
         }
       }
     : {
@@ -19,12 +20,12 @@ const IconGrid = ({ flex, children }) => {
         gridTemplateColumns: "repeat(auto-fill, minmax(4.1rem, 1fr))",
         gridAutoRows: "1fr",
         gridColumnGap: "2rem",
-        gridRowGap: "3rem",
+        gridRowGap: "2rem",
         alignSelf: "stretch",
-        padding: "2rem 1rem 3rem",
+        padding: "2rem 1rem 2rem",
         "@media(max-width: 1024px)": {
           gridColumnGap: "1rem",
-          gridRowGap: "2rem"
+          gridRowGap: "1rem"
         }
       };
 

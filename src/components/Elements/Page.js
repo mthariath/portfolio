@@ -20,7 +20,7 @@ class Page extends Component {
             : this.props.location.includes("about")
               ? "cherry"
               : this.props.location.includes("contact")
-                ? "lavender"
+                ? "orange"
                 : "teal";
     return (
       <FlavorContext.Provider value={color}>

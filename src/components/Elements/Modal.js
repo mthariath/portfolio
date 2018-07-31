@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
 import { Transition, animated } from "react-spring";
+import { FlavorContext, flavors } from "../Utils";
 
 const modalRoot = document.getElementById("modal-root");
 
@@ -30,26 +31,38 @@ class Modal extends React.Component {
 
   render() {
     const Backdrop = ({ children, toggle }) => (
-      <animated.div
-        onClick={toggle}
-        onKeyDown={toggle}
-        tabIndex="0"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          bottom: 0,
-          right: 0,
-          width: "100vw",
-          height: "100vh",
-          background: this.props.styles.opacity.interpolate(
-            o => `rgba(0, 0, 0, ${o / 3})`
-          ),
-          pointerEvents: this.props.styles.pointerEvents
+      <FlavorContext.Consumer>
+        {flavor => {
+          return (
+            <animated.div
+              onClick={toggle}
+              onKeyDown={toggle}
+              tabIndex="0"
+              css={{
+                "& *::selection": {
+                  background: flavors[flavor].main,
+                  color: flavors[flavor].bold
+                }
+              }}
+              style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                bottom: 0,
+                right: 0,
+                width: "100vw",
+                height: "100vh",
+                background: this.props.styles.opacity.interpolate(
+                  o => `rgba(0, 0, 0, ${o / 3})`
+                ),
+                pointerEvents: this.props.styles.pointerEvents
+              }}
+            >
+              <div>{children}</div>
+            </animated.div>
+          );
         }}
-      >
-        <div>{children}</div>
-      </animated.div>
+      </FlavorContext.Consumer>
     );
 
     return ReactDOM.createPortal(

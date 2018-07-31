@@ -3,6 +3,7 @@ import Img from "gatsby-image";
 import { Transition, animated, Keyframes, config } from "react-spring";
 
 import { Modal, Title, TitleBox, Icon, Button, Chip } from "../Elements";
+import { FlavorContext, flavors } from "../Utils";
 import { IconGrid } from "../Layout";
 
 const ImgContainer = Keyframes.Transition({
@@ -54,106 +55,121 @@ const ProjectModal = ({ visible, toggle, project }) => {
   const mainText = project.html;
   const ModalContent = styles => {
     return (
-      <Modal toggle={toggle} styles={styles}>
-        <div
-          css={{
-            display: "grid",
-            gridTemplateColumns: "1fr",
-            gridTemplateRows: "35vh 60vh",
-            position: "relative",
-            gridGap: "1vw",
-            padding: "2vw"
-          }}
-        >
-          <animated.div
-            style={{
-              opacity: styles.opacity,
-              zIndex: 100,
-              transform: styles.imgY.interpolate(y => `translateY(${y}px)`),
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center"
-            }}
-          >
-            <div
-              css={{
-                position: "fixed",
-                top: ".5rem",
-                right: "0.5rem",
-                zIndex: "1000"
-              }}
-            >
-              <Button Large>[close]</Button>
-            </div>
-            <div onClick={e => e.stopPropagation()}>
-              <Img
-                sizes={{
-                  ...project.frontmatter.image.childImageSharp.sizes,
-                  aspectRatio: 1.618 / 1
+      <FlavorContext.Consumer>
+        {flavor => {
+          return (
+            <Modal toggle={toggle} styles={styles}>
+              <div
+                css={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr",
+                  gridTemplateRows: "35vh 60vh",
+                  gridGap: "1vw",
+                  padding: "2vw"
                 }}
-                style={{
-                  height: "35vh",
-                  width: "calc(35vh*1.618)",
-                  maxWidth: "96vw"
-                }}
-              />
-            </div>
-          </animated.div>
-
-          <animated.div
-            css={{
-              padding: "0vw",
-              boxSizing: "border-box",
-              overflowY: "auto"
-            }}
-            style={{
-              opacity: styles.descOpacity,
-              transform: styles.descY.interpolate(y => `translateY(${y}px)`)
-            }}
-          >
-            <div
-              css={{
-                background: "rgba(255, 255, 255, 1)",
-                padding: "3vw",
-                boxSizing: "border-box"
-              }}
-              onClick={e => e.stopPropagation()}
-            >
-              <TitleBox small>
-                <div
-                  css={{
+              >
+                <animated.div
+                  style={{
+                    opacity: styles.opacity,
+                    zIndex: 100,
+                    transform: styles.imgY.interpolate(
+                      y => `translateY(${y}px)`
+                    ),
                     display: "flex",
-                    flexDirection: "row",
-                    "@media(max-width: 1024px)": {
-                      flexDirection: "column"
-                    }
+                    alignItems: "center",
+                    justifyContent: "center"
                   }}
                 >
-                  <div css={{ flex: "1" }}>
-                    <Title size={5} sans>
-                      {title}
-                    </Title>
-                    <Title size={6} sans>
-                      {client}
-                    </Title>
-                    {project.frontmatter.scope.map(scope => (
-                      <Chip margin key={scope}>
-                        {scope}
-                      </Chip>
-                    ))}
+                  <animated.div
+                    css={{
+                      position: "fixed",
+                      top: ".5rem",
+                      right: "0.5rem",
+                      zIndex: "1000"
+                    }}
+                    style={{ opacity: styles.descOpacity }}
+                  >
+                    <Button Large Active>
+                      [close]
+                    </Button>
+                  </animated.div>
+                  <div onClick={e => e.stopPropagation()}>
+                    <Img
+                      sizes={{
+                        ...project.frontmatter.image.childImageSharp.sizes,
+                        aspectRatio: 1.618 / 1
+                      }}
+                      style={{
+                        height: "35vh",
+                        width: "calc(35vh*1.618)",
+                        maxWidth: "96vw"
+                      }}
+                    />
                   </div>
-                  <div css={{ flex: "2" }}>
-                    <TitleBox grid small border title="tech">
-                      {technology.map(tech => <Icon type={tech} key={tech} />)}
+                </animated.div>
+
+                <animated.div
+                  css={{
+                    padding: "0vw",
+                    boxSizing: "border-box",
+                    overflowY: "auto"
+                  }}
+                  style={{
+                    opacity: styles.descOpacity,
+                    transform: styles.descY.interpolate(
+                      y => `translateY(${y}px)`
+                    )
+                  }}
+                >
+                  <div
+                    css={{
+                      background: flavors[flavor].bg,
+                      boxShadow: "0px 0px 100px 0px rgba(0,0,0,0.2)",
+                      padding: "3vw",
+                      boxSizing: "border-box"
+                    }}
+                    onClick={e => e.stopPropagation()}
+                  >
+                    <TitleBox small>
+                      <div
+                        css={{
+                          display: "flex",
+                          flexDirection: "row",
+                          "@media(max-width: 1024px)": {
+                            flexDirection: "column"
+                          }
+                        }}
+                      >
+                        <div css={{ flex: "1" }}>
+                          <Title size={5} sans>
+                            {title}
+                          </Title>
+                          <Title size={6} sans>
+                            {client}
+                          </Title>
+                          {project.frontmatter.scope.map(scope => (
+                            <Chip margin key={scope}>
+                              {scope}
+                            </Chip>
+                          ))}
+                        </div>
+                        <div css={{ flex: "1" }}>
+                          <TitleBox grid small border title="tech">
+                            {technology.map(tech => (
+                              <Icon type={tech} caption key={tech} />
+                            ))}
+                          </TitleBox>
+                        </div>
+                      </div>
                     </TitleBox>
+                    <div dangerouslySetInnerHTML={{ __html: mainText }} />
                   </div>
-                </div>
-              </TitleBox>
-              <div dangerouslySetInnerHTML={{ __html: mainText }} />
-            </div>
-          </animated.div>
-        </div>
-      </Modal>
+                </animated.div>
+              </div>
+            </Modal>
+          );
+        }}
+      </FlavorContext.Consumer>
     );
   };
 
