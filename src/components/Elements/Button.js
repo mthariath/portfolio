@@ -16,6 +16,11 @@ const Button = props => {
     <FlavorContext.Consumer>
       {flavor => {
         const css = {
+          textShadow:
+            props.Shadow &&
+            `2px 2px 50px ${
+              props.color ? flavors[props.color].button : flavors[flavor].button
+            }`,
           "&::after": {
             background: props.color
               ? flavors[props.color].button
@@ -58,6 +63,10 @@ Button.propTypes = {
   Small: PropTypes.bool,
   Icon: PropTypes.bool,
   Active: PropTypes.bool,
+  link: PropTypes.string,
+  blank: PropTypes.bool,
+  onClick: PropTypes.func,
+  Shadow: PropTypes.bool,
   children: PropTypes.node.isRequired
 };
 

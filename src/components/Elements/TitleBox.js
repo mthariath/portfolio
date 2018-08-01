@@ -22,7 +22,11 @@ const TitleBox = props => (
         alignItems: "center",
         justifyContent: "center",
         padding: props.small ? "1rem 2rem" : "2rem 3rem",
-        margin: props.border ? "1rem auto" : "4rem auto",
+        margin: props.border
+          ? "1rem auto"
+          : props.small
+            ? "1rem auto"
+            : "4rem auto",
         maxWidth: "100rem",
         "@media (max-width: 1024px)": {
           padding: props.small ? "0rem" : "0.5rem"

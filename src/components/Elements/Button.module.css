@@ -1,17 +1,17 @@
-.Button {
-    padding: 0.0rem 0rem;
+.Button,
+a.Button {
+    padding: 0rem 0rem;
     text-align: center;
     text-transform: lowercase;
     font-weight: 900;
     cursor: pointer;
-    color: rgba(0, 0, 0, .85);
-    font-family: 'Lobster Two', cursive;
-    
+    color: rgba(0, 0, 0, 0.85) !important;
+    font-family: "Lobster Two", cursive;
     display: inline-block;
     user-select: none;
     font-size: 1.3rem;
     white-space: nowrap;
-    transition: all 0.3s cubic-bezier(.82,.22,.44,1.52);
+    transition: all 0.3s cubic-bezier(0.82, 0.22, 0.44, 1.52);
     background: none;
     position: relative;
     z-index: 1;
@@ -19,114 +19,126 @@
     text-decoration: none;
 }
 
-.Button::after {
-    content: '';
+.Button::after,
+a.Button::after {
+    content: "";
     position: absolute;
     z-index: -1;
     width: 0;
     height: 3px;
     bottom: 0;
-    transition: all 0.3s cubic-bezier(.82,.22,.44,1.52);
+    transition: all 0.3s cubic-bezier(0.82, 0.22, 0.44, 1.52);
     transform: translateY(0px);
     border-radius: 2px;
     left: 50%;
 }
 
-.Button:hover::after, .Button:active::after, .Button:focus::after, .Active::after {
+.Button:hover::after,
+.Button:active::after,
+.Button:focus::after,
+.Active::after,
+a.Active::after {
     width: 100%;
     left: 0%;
 }
 
-
-.Button:hover, .Button:active, .Button:focus {
+.Button:hover,
+.Button:active,
+.Button:focus {
     outline: none;
     /* transform:  translateY(03px);     */
     transform: scale(1.1);
 }
 
-
-
-.Large::after {
+.Large::after,
+a.Large::after {
     height: 8px;
-
 }
 
-
-
-@media (min-width: 1800px) { 
-    .Large {
+@media (min-width: 1800px) {
+    .Large,
+    a.Large {
         font-size: 4.5rem;
     }
- }
+}
 
-@media (min-width: 1024px) and (max-width: 1800px) { 
-    .Large {
+@media (min-width: 1024px) and (max-width: 1800px) {
+    .Large,
+    a.Large {
         font-size: 3.5rem;
     }
-
     .Button::after {
         transform: translateY(-3.5px);
     }
-
-    .Large::after {
+    .Large::after,
+    a.Large::after {
         height: 6px;
     }
+}
 
- }
-
-@media (min-width: 800px) and (max-width: 1024px) { 
-    .Large {
+@media (min-width: 800px) and (max-width: 1024px) {
+    .Large,
+    a.Large {
         font-size: 3rem;
     }
     .Button::after {
         transform: translateY(-3px);
     }
-
-    .Large::after {
+    .Large::after,
+    a.Large::after {
         height: 6px;
     }
+}
 
- }
-
-@media (max-width: 800px) { 
-    .Large {
+@media (max-width: 800px) {
+    .Large,
+    a.Large {
         font-size: 1.5rem;
     }
     .Button::after {
         transform: translateY(0px);
     }
-
-    .Large::after {
+    .Large::after,
+    a.Large::after {
         height: 4px;
     }
-    
- }  
+}
 
-@media (max-width: 640px) { 
-    .Large {
+@media (max-width: 640px) {
+    .Large,
+    a.Large {
         font-size: 1.3rem;
     }
     .Button::after {
         transform: translateY(1.65px);
     }
-
-    .Large::after {
+    .Large::after,
+    a.Large::after {
         height: 4px;
     }
- }
-
-.Icon {
-    font-size: 32px;
 }
 
-.Icon::after {
+.Icon,
+a.Icon {
+    font-size: 32px;
+    display: inline;
+}
+
+.Icon::after,
+a.Icon::after {
     transform: translateY(3px);
     height: 6px;
-
 }
+
+.Icon:hover::after,
+a.Icon:hover::after {
+    width: 50%;
+    left: 25%;
+}
+
 @media (min-width: 1024px) {
-    .Icon {
+    .Icon,
+    a.Icon {
         font-size: 60px;
     }
 }
- 

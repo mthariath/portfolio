@@ -39,6 +39,18 @@ class Modal extends React.Component {
               onKeyDown={toggle}
               tabIndex="0"
               css={{
+                "& a": {
+                  color: flavors[flavor].pale
+                },
+                "& a::after": {
+                  background: flavors[flavor].pale
+                },
+                "& a:hover": {
+                  color: flavors[flavor].button
+                },
+                "& a:hover::after": {
+                  background: flavors[flavor].button
+                },
                 "& *::selection": {
                   background: flavors[flavor].main,
                   color: flavors[flavor].bold

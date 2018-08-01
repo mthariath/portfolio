@@ -1,10 +1,20 @@
 import React from "react";
 import Img from "gatsby-image";
-import { Transition, animated, Keyframes, config } from "react-spring";
+import rehypeReact from "rehype-react";
+import { animated, Keyframes, config } from "react-spring";
 
 import { Modal, Title, TitleBox, Icon, Button, Chip } from "../Elements";
 import { FlavorContext, flavors } from "../Utils";
 import { IconGrid } from "../Layout";
+
+const scroll = e => {
+  const el = e.nativeEvent.srcElement;
+  console.log(el.scrollTop / Math.abs(el.clientHeight - el.scrollHeight));
+};
+
+const renderAst = new rehypeReact({
+  createElement: React.createElement
+}).Compiler;
 
 const ImgContainer = Keyframes.Transition({
   open: [
@@ -89,7 +99,7 @@ const ProjectModal = ({ visible, toggle, project }) => {
                     }}
                     style={{ opacity: styles.descOpacity }}
                   >
-                    <Button Large Active>
+                    <Button Large Shadow>
                       [close]
                     </Button>
                   </animated.div>
@@ -162,7 +172,8 @@ const ProjectModal = ({ visible, toggle, project }) => {
                         </div>
                       </div>
                     </TitleBox>
-                    <div dangerouslySetInnerHTML={{ __html: mainText }} />
+                    {/* <div dangerouslySetInnerHTML={{ __html: mainText }} /> */}
+                    {renderAst(project.htmlAst)}
                   </div>
                 </animated.div>
               </div>
