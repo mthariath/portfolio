@@ -22,6 +22,8 @@ We approached the Guardian system from a design-first perspective, putting great
 
 The simplicity and value of the Guardian system begins with its architecture. To understand its significance, it's important to know the structure most consumr IOT products use.
 
+<img src="guardian-leak-detector.jpg" alt="Guardian Leak Detector" title="The Guardian Leak Detector">
+
 ### Leak Detector
 
 The Guardian Leak Detector is one of my proudest professional and creative achievements. It is arguably the _best_ product of its type, due to several unique features, including its ability to detect as little as three drops of water and monitor the vast majority of household appliances and fixtures for leaks.
