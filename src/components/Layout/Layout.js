@@ -12,12 +12,16 @@ const Layout = ({ children, location }) => (
       <title>Mike Thariath</title>
       <meta name="description" content="Sample" />
       <meta name="keywords" content="sample, something" />
+      <meta
+        name="google-site-verification"
+        content="YB8HX2YUTpQXRI6OJAWGvv8XMVEFcdpTZ8s07TZdbo8"
+      />
       <link rel="shortcut icon" type="image/png" href={favicon} />
       <link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
         integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       />
     </Helmet>
     {children}

@@ -17,16 +17,16 @@ I designed the Guardian Leak Prevention System, an innovative IOT solution for w
 
 We approached the Guardian system from a design-first perspective, putting great effort and thought into making the products easy to install and delightful to use and see.
 
-![Guardian Leak Detector][leak-detector]
+### System Architecture
+
+The simplicity and value of the Guardian system begins with its architecture. To understand its significance, it's important to know the structure most consumr IOT products use.
 
 ### Leak Detector
 
-The Guardian Leak Detector is one of my proudest professional and creative achievements. It is arguably the _best_ product of its type, due to several unique features, including its ability to detect as little as three drops of water, monitor the vast majority of household appliances and fixtures for leaks, and last ten years on one battery.
+The Guardian Leak Detector is one of my proudest professional and creative achievements. It is arguably the _best_ product of its type, due to several unique features, including its ability to detect as little as three drops of water and monitor the vast majority of household appliances and fixtures for leaks.
 
 ### Valve Controller
 
-The Valve Controller installs without any tools, literally in a few seconds, on the most commonly available ball valves on the market. These two factors&mdash;the extreme ease of installation and universal compatibility&mdash;combine to make the Valve Controller a unique product with excellent product-market-fit.
+The Valve Controller includes similarly disruptive features. Most importantly, it installs without any tools in under ten seconds on the most commonly available ball valves on the market. These two factors&mdash;the extreme ease of installation and universal compatibility&mdash;combine to make the Valve Controller a unique product with excellent product-market-fit.
 
-##
-
-[leak-detector]: guardian-leak-detector.jpg
+## Digital Marketing
