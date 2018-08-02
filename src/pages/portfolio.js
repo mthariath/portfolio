@@ -28,7 +28,7 @@ const PortfolioPage = props => {
                   scope
                   image {
                     childImageSharp {
-                      sizes(maxWidth: 800) {
+                      sizes(maxWidth: 1400) {
                         ...GatsbyImageSharpSizes
                       }
                     }
