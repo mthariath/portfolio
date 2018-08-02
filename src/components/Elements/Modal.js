@@ -4,12 +4,12 @@ import ReactDOM from "react-dom";
 import { Transition, animated } from "react-spring";
 import { FlavorContext, flavors } from "../Utils";
 
-const modalRoot = document.getElementById("modal-root");
-
 class Modal extends React.Component {
   constructor(props) {
     super(props);
-    this.el = document.createElement("div");
+    if (typeof document !== `undefined`) {
+      this.el = document.createElement("div");
+    }
   }
   componentDidMount() {
     // The portal element is inserted in the DOM tree after
@@ -20,11 +20,13 @@ class Modal extends React.Component {
     // DOM node, or uses 'autoFocus' in a descendant, add
     // state to Modal and only render the children when Modal
     // is inserted in the DOM tree.
+    const modalRoot = document.getElementById("modal-root");
     document.body.style.overflow = "hidden";
     modalRoot.appendChild(this.el);
   }
 
   componentWillUnmount() {
+    const modalRoot = document.getElementById("modal-root");
     document.body.style.overflow = "auto";
     modalRoot.removeChild(this.el);
   }
