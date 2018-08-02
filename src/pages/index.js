@@ -31,16 +31,10 @@ const IndexPage = props => {
           </Paragraph>
 
           <TitleBox title="connect with me" grid>
-            <Button Icon link="#" blank>
+            <Button Icon link="https://github.com/mthariath" blank>
               <i className="fab fa-github" />
             </Button>
-            <Button Icon>
-              <i className="fab fa-stack-overflow" />
-            </Button>
-            <Button Icon>
-              <i className="fab fa-codepen" />
-            </Button>
-            <Button Icon link="#" blank>
+            <Button Icon link="mailto:mike@thariath.com">
               <i className="far fa-envelope" />
             </Button>
             <Button Icon link="#" blank>

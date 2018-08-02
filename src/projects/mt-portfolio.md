@@ -1,12 +1,12 @@
 ---
-path: "/guardian-leak-prevention-system"
-date: "2018-01-12T17:12:33.962Z"
-title: "Guardian Leak Prevention System"
+path: "/mt-portfolio"
+date: "2018-07-12T17:12:33.962Z"
 order: "2"
-client: "Elexa Consumer Products"
-scope: ['Product Design & UX', 'System Architecture', 'Hand Model', 'Digital Marketing']
-technology: ['solidworks', 'node', 'html', 'css', 'javascript', 'analytics', 'amazon']
-image: "./guardian-valve-controller.jpg"
+title: "Portfolio Website"
+client: "Mike Thariath"
+scope: ['Everything!']
+technology: ['css', 'javascript', 'react', 'gatsby', 'graph', 'netlify', 'analytics']
+image: "./mt-portfolio.png"
 
 ---
 

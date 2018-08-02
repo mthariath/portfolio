@@ -127,13 +127,16 @@ a.Icon {
 .Icon::after,
 a.Icon::after {
     transform: translateY(3px);
-    height: 6px;
+    height: 8px;
 }
 
 .Icon:hover::after,
-a.Icon:hover::after {
+a.Icon:hover::after,
+a.Icon:active::after,
+a.Icon:focus::after {
     width: 50%;
     left: 25%;
+    height: 8px;
 }
 
 @media (min-width: 1024px) {

@@ -21,13 +21,17 @@ const TitleBox = props => (
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        padding: props.small ? "1rem 2rem" : "2rem 3rem",
+        padding: props.small
+          ? "1rem 2rem"
+          : props.border
+            ? "2rem 3rem"
+            : "4rem 6rem",
         margin: props.border
           ? "1rem auto"
           : props.small
             ? "1rem auto"
-            : "4rem auto",
-        maxWidth: "100rem",
+            : "4rem 10vw",
+        maxWidth: props.small && "100rem",
         "@media (max-width: 1024px)": {
           padding: props.small ? "0rem" : "0.5rem"
         }

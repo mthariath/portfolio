@@ -1,6 +1,7 @@
 ---
 path: "/dome"
 date: "2018-03-12T17:12:33.962Z"
+order: "3"
 title: "Dome Product Line"
 client: "Elexa Consumer Products"
 scope: ["Product Design", "Copywriting",  "Documentation"]
