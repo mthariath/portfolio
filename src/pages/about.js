@@ -9,7 +9,7 @@ const AboutPage = props => {
       <ArticleGrid
         transition
         title="I'm Mike!"
-        subtitle={<>I love making cool stuff.</>}
+        subtitle={<>I love making awesome products.</>}
       >
         <div className={classes.Intro}>
           <Paragraph>

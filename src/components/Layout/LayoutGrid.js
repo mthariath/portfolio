@@ -18,7 +18,7 @@ function LayoutGrid(props) {
             color: flavors[flavor].button
           },
           "& a:hover::after": {
-            background: flavors[flavor].button
+            background: flavors[flavor].fade
           },
           "& *::selection": {
             background: flavors[flavor].main,

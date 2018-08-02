@@ -46,10 +46,10 @@ class Modal extends React.Component {
                   background: flavors[flavor].pale
                 },
                 "& a:hover": {
-                  color: flavors[flavor].button
+                  color: flavors[flavor].fade
                 },
                 "& a:hover::after": {
-                  background: flavors[flavor].button
+                  background: flavors[flavor].fade
                 },
                 "& *::selection": {
                   background: flavors[flavor].main,

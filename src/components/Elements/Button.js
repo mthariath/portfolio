@@ -22,9 +22,14 @@ const Button = props => {
               props.color ? flavors[props.color].button : flavors[flavor].button
             }`,
           "&::after": {
-            background: props.color
-              ? flavors[props.color].button
-              : flavors[flavor].button
+            background: `${
+              props.color ? flavors[props.color].button : flavors[flavor].button
+            }!important`
+          },
+          "&:hover::after": {
+            background: `${
+              props.color ? flavors[props.color].button : flavors[flavor].button
+            }!important`
           }
         };
         const buttonProps = {
