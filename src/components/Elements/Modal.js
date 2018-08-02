@@ -4,12 +4,12 @@ import ReactDOM from "react-dom";
 import { Transition, animated } from "react-spring";
 import { FlavorContext, flavors } from "../Utils";
 
-const modalRoot = document.getElementById("modal-root");
-
 class Modal extends React.Component {
   constructor(props) {
     super(props);
-    this.el = document.createElement("div");
+    if (typeof document !== `undefined`) {
+      this.el = document.createElement("div");
+    }
   }
   componentDidMount() {
     // The portal element is inserted in the DOM tree after
@@ -20,11 +20,13 @@ class Modal extends React.Component {
     // DOM node, or uses 'autoFocus' in a descendant, add
     // state to Modal and only render the children when Modal
     // is inserted in the DOM tree.
+    const modalRoot = document.getElementById("modal-root");
     document.body.style.overflow = "hidden";
     modalRoot.appendChild(this.el);
   }
 
   componentWillUnmount() {
+    const modalRoot = document.getElementById("modal-root");
     document.body.style.overflow = "auto";
     modalRoot.removeChild(this.el);
   }
@@ -39,6 +41,18 @@ class Modal extends React.Component {
               onKeyDown={toggle}
               tabIndex="0"
               css={{
+                "& a": {
+                  color: flavors[flavor].pale
+                },
+                "& a::after": {
+                  background: flavors[flavor].pale
+                },
+                "& a:hover": {
+                  color: flavors[flavor].fade
+                },
+                "& a:hover::after": {
+                  background: flavors[flavor].fade
+                },
                 "& *::selection": {
                   background: flavors[flavor].main,
                   color: flavors[flavor].bold

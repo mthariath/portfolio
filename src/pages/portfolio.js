@@ -15,8 +15,9 @@ const PortfolioPage = props => {
           ) {
             edges {
               node {
-                excerpt(pruneLength: 50)
+                excerpt
                 html
+                htmlAst
                 id
                 frontmatter {
                   date

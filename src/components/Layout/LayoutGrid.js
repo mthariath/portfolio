@@ -8,6 +8,18 @@ function LayoutGrid(props) {
     <FlavorContext.Consumer>
       {flavor => {
         const css = {
+          "& a": {
+            color: flavors[flavor].pale
+          },
+          "& a::after": {
+            background: flavors[flavor].pale
+          },
+          "& a:hover": {
+            color: flavors[flavor].button
+          },
+          "& a:hover::after": {
+            background: flavors[flavor].fade
+          },
           "& *::selection": {
             background: flavors[flavor].main,
             color: flavors[flavor].bold

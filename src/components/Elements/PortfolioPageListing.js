@@ -28,7 +28,9 @@ const PortfolioPageListing = ({ project }) => {
                 <Title sans size={6}>
                   {project.frontmatter.title}
                 </Title>
-                <Paragraph Small>{project.excerpt}</Paragraph>
+                <Paragraph Small>
+                  {project.excerpt.replace("## Project Overview", "")}
+                </Paragraph>
                 <div
                   css={{
                     margin: "0.3rem 0"
