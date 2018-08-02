@@ -33,7 +33,12 @@ const TitleBox = props => (
             : "4rem 10vw",
         maxWidth: props.small && "100rem",
         "@media (max-width: 1024px)": {
-          padding: props.small ? "0rem" : "0.5rem"
+          padding: props.small ? "0rem" : "0.5rem",
+          margin: props.border
+            ? "1rem auto"
+            : props.small
+              ? "1rem auto"
+              : "4rem 3vw"
         }
       };
 
