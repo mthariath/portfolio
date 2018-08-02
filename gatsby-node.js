@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
- // You can delete this file if you're not using it
+// You can delete this file if you're not using it
 
 //  const path = require("path");
 
@@ -42,7 +42,7 @@
 //          if (result.errors) {
 //            reject(result.errors)
 //          }
- 
+
 //          // Create project pages.
 //          result.data.allMarkdownRemark.edges.forEach(edge => {
 //              createPage({
@@ -53,19 +53,9 @@
 //                },
 //              })
 //          })
- 
+
 //          return
 //        })
 //      )
 //    })
 //  }
-
-exports.setWebpackConfig = function({config, env}) {
-    config.merge({
-      resolve: {
-        root: path.resolve(__dirname, './src/components/'),
-        extensions: ['', '.js', '.jsx', '.json'],
-      }
-    });
-    return config;
-  }
