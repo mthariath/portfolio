@@ -4,10 +4,16 @@ date: "2018-01-12T17:12:33.962Z"
 title: "Guardian Leak Prevention System"
 order: "2"
 client: "Elexa Consumer Products"
-scope: ['Product Design & UX', 'System Architecture', 'Hand Model', 'Digital Marketing']
-technology: ['solidworks', 'node', 'html', 'css', 'javascript', 'analytics', 'amazon']
+scope:
+  [
+    "Product Design & UX",
+    "System Architecture",
+    "Hand Model",
+    "Digital Marketing",
+  ]
+technology:
+  ["solidworks", "node", "html", "css", "javascript", "analytics", "amazon"]
 image: "./guardian-valve-controller.jpg"
-
 ---
 
 ## Project Overview
@@ -22,7 +28,8 @@ We approached the Guardian system from a design-first perspective, putting great
 
 The simplicity and value of the Guardian system begins with its architecture. To understand its significance, it's important to know the structure most consumr IOT products use.
 
-<img src="guardian-leak-detector.jpg" alt="Guardian Leak Detector" title="The Guardian Leak Detector">
+<img src="guardian-leak-detector.jpg" alt="Guardian Leak Detector">
+<image-caption>The Guardian Leak Detector</image-caption>
 
 ### Leak Detector
 
