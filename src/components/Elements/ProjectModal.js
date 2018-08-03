@@ -10,14 +10,22 @@ import {
   Icon,
   Button,
   Chip,
-  ImgCaption
+  ImgCaption,
+  List
 } from "../Elements";
 import { FlavorContext, flavors } from "../Utils";
 import { IconGrid } from "../Layout";
 
+const UnorderedList = ({ children }) => <List>{children}</List>;
+const OrderedList = ({ children }) => <List ordered>{children}</List>;
+
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { "image-caption": ImgCaption }
+  components: {
+    "image-caption": ImgCaption,
+    ol: OrderedList,
+    ul: UnorderedList
+  }
 }).Compiler;
 
 const ImgContainer = Keyframes.Transition({

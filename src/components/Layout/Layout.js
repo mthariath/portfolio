@@ -16,6 +16,7 @@ const Layout = ({ children, location }) => (
         name="google-site-verification"
         content="YB8HX2YUTpQXRI6OJAWGvv8XMVEFcdpTZ8s07TZdbo8"
       />
+      <meta name="theme-color" content="#111" />
       <link rel="shortcut icon" type="image/png" href={favicon} />
       <link
         rel="stylesheet"

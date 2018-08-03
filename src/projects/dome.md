@@ -4,10 +4,9 @@ date: "2018-03-12T17:12:33.962Z"
 order: "3"
 title: "Dome Product Line"
 client: "Elexa Consumer Products"
-scope: ["Product Design", "Copywriting",  "Documentation"]
-technology: ['solidworks', 'node', 'git', 'z-wave', 'prismic', 'indesign']
+scope: ["Product Design", "Copywriting", "Documentation"]
+technology: ["solidworks", "node", "git", "z-wave", "prismic", "indesign"]
 image: "./dome.png"
-
 ---
 
 ## Project Overview
@@ -15,6 +14,9 @@ image: "./dome.png"
 As the first hire at Elexa Consumer Products, I assumed responsibilities encompassing a wide range of skills and played an instrumental role in bringing the Dome product line to market.<!-- end --> My primary contributions to Dome were in product design and specification, documentation, and digital marketing.
 
 ## Product Design and Specification
+
+<img src="dmwv1.jpg" alt="Dome Water Main Shut-Off">
+<image-caption>The Dome Water Main Shut-Off</image-caption>
 
 I joined Elexa shortly before the Dome product line launched. I was responsible for the industrial design for the <a target="_blank" href="https://domeha.com/z-wave-water-main-shut-off-valve">Water Main Shut-Off</a> and the <a target="_blank" href="https://domeha.com/z-wave-door-and-window-sensor-pro">Door/Window Sensor Pro</a>.
 

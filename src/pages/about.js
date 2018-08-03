@@ -1,7 +1,6 @@
 import React from "react";
 import { ArticleGrid, IconGrid, Layout } from "../components/Layout";
 import { Icon, Paragraph, Title, TitleBox } from "../components/Elements";
-import classes from "./index.module.css";
 
 const AboutPage = props => {
   return (
@@ -11,7 +10,14 @@ const AboutPage = props => {
         title="I'm Mike!"
         subtitle={<>I love making awesome products.</>}
       >
-        <div className={classes.Intro}>
+        <div
+          css={{
+            "@media (min-width: 1800px)": {
+              gridArea: "intro",
+              transform: "translateX(-5rem) translateY(-5rem)"
+            }
+          }}
+        >
           <Paragraph>
             I started playing around with websites more than fifteen years ago.
             Remember the days of Geocities and Angelfire? Back then. I drifted

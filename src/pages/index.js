@@ -1,7 +1,12 @@
 import React from "react";
+import { Link } from "gatsby";
 import { ArticleGrid, Layout } from "../components/Layout";
-import { Button, Paragraph, TitleBox } from "../components/Elements";
-import classes from "./index.module.css";
+import {
+  Button,
+  Paragraph,
+  TitleBox,
+  ContactToggle
+} from "../components/Elements";
 
 const IndexPage = props => {
   return (
@@ -11,23 +16,41 @@ const IndexPage = props => {
         title="Hi There!"
         subtitle={
           <>
-            my name is <strong>Mike</strong>.
+            my name is <strong>Mike Thariath</strong>.
           </>
         }
       >
-        <div className={classes.Intro}>
+        <div
+          css={{
+            "@media (min-width: 1800px)": {
+              gridArea: "intro",
+              transform: "translateX(-5rem) translateY(-5rem)"
+            }
+          }}
+        >
           <Paragraph>
             I'm a web developer, product designer,and all around good guy. I
-            love solving problems and learning new things.
+            love coming up with ideas that make people's lives better.
           </Paragraph>
           <Paragraph>
-            Feel free to check out my work, read about my crazy life, or read my
-            crazy thoughts.{" "}
+            While you're here, please feel free to look at{" "}
+            <Link to="/portfolio/">my work</Link> or read about{" "}
+            <Link to="/about/">my life and my skills</Link>.
           </Paragraph>
           <Paragraph>
-            If you're working on something awesome{" "}
-            <span className="small-text">(that I can help with,) </span>I'd love
-            to hear from you!
+            If you're working on something awesome&nbsp;
+            <Paragraph Span Small>
+              (that I can help with,)
+            </Paragraph>
+            &nbsp;I'd love to{" "}
+            <ContactToggle>
+              {toggle => (
+                <a style={{ cursor: "pointer" }} onClick={toggle}>
+                  hear from you
+                </a>
+              )}
+            </ContactToggle>
+            !
           </Paragraph>
 
           <TitleBox title="connect with me" grid>
@@ -37,9 +60,14 @@ const IndexPage = props => {
             <Button Icon link="mailto:mike@thariath.com">
               <i className="far fa-envelope" />
             </Button>
-            <Button Icon link="#" blank>
-              <i className="fas fa-phone" />
-            </Button>
+            <ContactToggle>
+              {toggle => (
+                <Button Icon onClick={toggle}>
+                  <i className="fas fa-phone" />
+                </Button>
+              )}
+            </ContactToggle>
+
             {/* <Button Icon link='#' blank><i class="fab fa-github" /></Button> */}
           </TitleBox>
         </div>
