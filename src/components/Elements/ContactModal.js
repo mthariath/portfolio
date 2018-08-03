@@ -64,7 +64,7 @@ const ContactModal = ({ toggle, visible }) => {
               Interested in working with me?
               <br />
               <Paragraph Span Small>
-                Feel free to contact me through any of the methods below.
+                Feel free to contact me through any of the channels below.
               </Paragraph>
             </Paragraph>
 
