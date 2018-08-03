@@ -9,8 +9,6 @@ function FirstChild(props) {
 }
 
 class Stripes extends Component {
-<<<<<<< Updated upstream
-
   render() {
     const props = this.props;
     return (
@@ -31,28 +29,6 @@ class Stripes extends Component {
             rectStyles[i] = style;
           }
 
-=======
-  render() {
-    const props = this.props;
-    return (
-      <FlavorContext.Consumer>
-        {flavor => {
-          const colors = [];
-          for (const colorKey in flavors[flavor]) {
-            colors.push(flavors[flavor][colorKey]);
-          }
-          const rectStyles = [];
-          for (let i = 0; i < 5; i++) {
-            let style = {
-              height: Math.random() * 20 + 40,
-              opacity: 0.15 * i + 0.05 + Math.random() * 0.1,
-              fill: colors[3],
-              transition: "all 0.5s cubic-bezier(.82,.22,.44,1.52)"
-            };
-            rectStyles[i] = style;
-          }
-
->>>>>>> Stashed changes
           return (
             <ReactTransitionGroup component={FirstChild}>
               <div
