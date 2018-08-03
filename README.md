@@ -13,6 +13,18 @@ git clone https://github.com/mthariath/portfolio
 cd portfolio
 ```
 
+Install all the modules:
+
+```sh
+yarn install
+```
+
+or
+
+```sh
+npm install
+```
+
 Make sure that you have the Gatsby CLI program installed:
 
 ```sh
