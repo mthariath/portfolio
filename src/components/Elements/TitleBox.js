@@ -17,7 +17,7 @@ const TitleBox = props => (
         display: "flex",
         backgroundColor: props.shaded
           ? flavors[flavor].fade
-          : "rgba(255, 255, 255, 0.85)",
+          : "rgba(255, 255, 255, 0.9)",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
@@ -33,13 +33,18 @@ const TitleBox = props => (
             : "4rem 10vw",
         maxWidth: props.small && "100rem",
         "@media (max-width: 1024px)": {
-          padding: props.small ? "0rem" : "0.5rem"
+          padding: props.small ? "0rem" : "0.5rem",
+          margin: props.border
+            ? "1rem auto"
+            : props.small
+              ? "1rem auto"
+              : "4rem 3vw"
         }
       };
 
       const innerCss = { padding: "1rem 1rem", alignSelf: "stretch" };
       return (
-        <div css={css}>
+        <div css={css} onClick={props.onClick}>
           {props.title && (
             <Title size={5} underline>
               {props.title}
@@ -64,6 +69,7 @@ TitleBox.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node.isRequired,
   small: PropTypes.bool,
+  onClick: PropTypes.func,
   border: PropTypes.bool
 };
 

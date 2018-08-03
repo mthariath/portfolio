@@ -1,20 +1,26 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classes from './Paragraph.module.css'
+import React from "react";
+import PropTypes from "prop-types";
+import classes from "./Paragraph.module.css";
 
-const Paragraph = ( {children, Small} ) => {
-    const classList = [classes.Paragraph, Small && classes.Small]
-    return (
-        <p className={classList.join(' ')}>
-            {children}
-        </p>
-        
-    )
-}
+const Paragraph = ({ children, Center, Small, Span }) => {
+  const classList = [
+    classes.Paragraph,
+    Small && classes.Small,
+    Center && classes.Center
+  ];
+  const classNames = classList.join(" ");
+  return Span ? (
+    <span className={classNames}>{children}</span>
+  ) : (
+    <p className={classNames}>{children}</p>
+  );
+};
 
 Paragraph.propTypes = {
-    Small: PropTypes.bool,
-    children: PropTypes.node.isRequired
-}
+  Small: PropTypes.bool,
+  Center: PropTypes.bool,
+  Span: PropTypes.bool,
+  children: PropTypes.node.isRequired
+};
 
-export {Paragraph};
+export { Paragraph };

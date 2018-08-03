@@ -3,17 +3,29 @@ import Img from "gatsby-image";
 import rehypeReact from "rehype-react";
 import { animated, Keyframes, config } from "react-spring";
 
-import { Modal, Title, TitleBox, Icon, Button, Chip } from "../Elements";
+import {
+  Modal,
+  Title,
+  TitleBox,
+  Icon,
+  Button,
+  Chip,
+  ImgCaption,
+  List
+} from "../Elements";
 import { FlavorContext, flavors } from "../Utils";
 import { IconGrid } from "../Layout";
 
-const scroll = e => {
-  const el = e.nativeEvent.srcElement;
-  console.log(el.scrollTop / Math.abs(el.clientHeight - el.scrollHeight));
-};
+const UnorderedList = ({ children }) => <List>{children}</List>;
+const OrderedList = ({ children }) => <List ordered>{children}</List>;
 
 const renderAst = new rehypeReact({
-  createElement: React.createElement
+  createElement: React.createElement,
+  components: {
+    "image-caption": ImgCaption,
+    ol: OrderedList,
+    ul: UnorderedList
+  }
 }).Compiler;
 
 const ImgContainer = Keyframes.Transition({
@@ -62,7 +74,6 @@ const ImgContainer = Keyframes.Transition({
 
 const ProjectModal = ({ visible, toggle, project }) => {
   const { title, client, scope, technology } = project.frontmatter;
-  const mainText = project.html;
   const ModalContent = styles => {
     return (
       <FlavorContext.Consumer>

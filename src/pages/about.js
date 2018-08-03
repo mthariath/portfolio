@@ -1,7 +1,12 @@
 import React from "react";
 import { ArticleGrid, IconGrid, Layout } from "../components/Layout";
-import { Icon, Paragraph, Title, TitleBox } from "../components/Elements";
-import classes from "./index.module.css";
+import {
+  Icon,
+  Paragraph,
+  Title,
+  TitleBox,
+  ContactToggle
+} from "../components/Elements";
 
 const AboutPage = props => {
   return (
@@ -11,18 +16,27 @@ const AboutPage = props => {
         title="I'm Mike!"
         subtitle={<>I love making awesome products.</>}
       >
-        <div className={classes.Intro}>
+        <div
+          css={{
+            "@media (min-width: 1800px)": {
+              gridArea: "intro",
+              transform: "translateX(-5rem) translateY(-5rem)"
+            }
+          }}
+        >
           <Paragraph>
-            I started playing around with websites more than fifteen years ago.
-            Remember the days of Geocities and Angelfire? Back then. I drifted
-            away from web development during high school and meandered my way
-            through various interests, hobbies, and careers until my natural
-            inclinations brought me back around recently.
+            I started making websites more than fifteen years ago, in the days
+            of Geocities and Angelfire. I drifted away from web development
+            during high school and pursued various academic and professional
+            interests until my natural inclinations brought me back around
+            recently.
           </Paragraph>
           <Paragraph>
-            I'm currently learning my way through the full stack, front to back.
-            My skills primarily lie in the front end, but I'm working on
-            leveling my skillset everyday.{" "}
+            I'm currently freelancing while developing my skills on the full
+            stack, front to back. My skills primarily lie in the front end, but
+            I'm leveling my skillset everyday. Ideally, I would like to join a
+            developer-oriented team and use my skills to create large-scale
+            applications.
           </Paragraph>
           <Paragraph>
             Here's a nifty grid that shows some of my skills:
@@ -87,19 +101,21 @@ const AboutPage = props => {
           </TitleBox>
           <Paragraph>
             Outside of the realm of 1's and 0's, I have a deep passion for
-            woodworking and music - I will have some cool projects to share soon
-            enough. I also enjoy cooking very much, though mostly for others
-            more than myself.
-          </Paragraph>
-          <Paragraph>
-            Professionally, I am currently freelancing while building up my
-            skills to prepare for the right opportunity. Ideally, I would like
-            to join a developer-oriented team and use my skills to create
-            large-scale applications.
+            woodworking and music&mdash;I will have some cool projects to share
+            soon enough. I also enjoy cooking and have recently caught the
+            horticulture bug.
           </Paragraph>
           <Paragraph>
             I'm always looking for cool projects to contribute to. Please don't
-            hesitate to reach out if there's anything I can help with.
+            hesitate to{" "}
+            <ContactToggle>
+              {toggle => (
+                <a style={{ cursor: "pointer" }} onClick={toggle}>
+                  reach out
+                </a>
+              )}
+            </ContactToggle>{" "}
+            if there's anything I can help with.
           </Paragraph>
           <Paragraph>-Mike</Paragraph>
         </div>
