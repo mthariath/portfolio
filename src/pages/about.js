@@ -5,9 +5,10 @@ import {
   Paragraph,
   Title,
   TitleBox,
-  ContactToggle
+  ContactModal
 } from "../components/Elements";
 
+import { Toggle } from "../components/Utils";
 const AboutPage = props => {
   return (
     <Layout location={props.location}>
@@ -107,16 +108,18 @@ const AboutPage = props => {
           </Paragraph>
           <Paragraph>
             I'm always looking for cool projects to contribute to. Please don't
-            hesitate to{" "}
-            <ContactToggle>
-              {toggle => (
-                <a style={{ cursor: "pointer" }} onClick={toggle}>
-                  reach out
-                </a>
-              )}
-            </ContactToggle>{" "}
-            if there's anything I can help with.
+            hesitate to reach out if there's anything I can help with.
           </Paragraph>
+          <Toggle>
+            {({ visible, toggle }) => (
+              <>
+                <a style={{ cursor: "pointer" }} onClick={toggle}>
+                  hear from you
+                </a>
+                {<ContactModal toggle={toggle} visible={visible} />}
+              </>
+            )}
+          </Toggle>
           <Paragraph>-Mike</Paragraph>
         </div>
       </ArticleGrid>

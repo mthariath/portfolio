@@ -14,7 +14,6 @@ import {
   List
 } from "../Elements";
 import { FlavorContext, flavors } from "../Utils";
-import { IconGrid } from "../Layout";
 
 const UnorderedList = ({ children }) => <List>{children}</List>;
 const OrderedList = ({ children }) => <List ordered>{children}</List>;

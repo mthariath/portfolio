@@ -19,3 +19,4 @@ export * from "./SadFace";
 export * from "./ContactModal";
 export * from "./ContactToggle";
 export * from "./List";
+export * from "./ContactToggleText";
