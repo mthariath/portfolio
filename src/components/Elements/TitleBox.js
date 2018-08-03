@@ -17,7 +17,7 @@ const TitleBox = props => (
         display: "flex",
         backgroundColor: props.shaded
           ? flavors[flavor].fade
-          : "rgba(255, 255, 255, 0.9)",
+          : "rgba(255, 255, 255, 0.95)",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",

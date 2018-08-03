@@ -54,7 +54,7 @@ const ContactModal = ({ toggle, visible }) => {
             height: "100vh",
             display: "flex",
             flexDirection: "column",
-            alignItems: "stretch",
+            alignItems: "center",
             justifyContent: "center",
             transform: styles.contentY.interpolate(y => `translateY(${y}px)`)
           }}
