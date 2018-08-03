@@ -57,6 +57,9 @@ const IndexPage = props => {
             <Button Icon link="https://github.com/mthariath" blank>
               <i className="fab fa-github" />
             </Button>
+            <Button Icon link="https://linkedin.com/in/thariath" blank>
+              <i className="fab fa-linkedin" />
+            </Button>
             <Button Icon link="mailto:mike@thariath.com">
               <i className="far fa-envelope" />
             </Button>
