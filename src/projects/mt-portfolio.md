@@ -14,7 +14,7 @@ image: "./mt-portfolio.png"
 
 ## Project Overview
 
-I wanted my website website to be more than a repository of projects. I wanted it to reflect my capabilities and personality. <!-- end -->I designed and developed the website with no templates or CSS frameworks. I used React and Gatsby for the front end.
+I wanted my website to be more than a repository of projects. I wanted it to reflect my capabilities and personality. <!-- end -->I designed and developed the website with no templates or CSS frameworks. I used React and Gatsby for the front end.
 
 ## Design
 
