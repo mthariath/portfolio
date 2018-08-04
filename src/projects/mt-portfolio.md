@@ -14,22 +14,22 @@ image: "./mt-portfolio.png"
 
 ## Project Overview
 
-I wanted my website website to be more than a repository for projects - I wanted it to be a reflection of my capabilities and personality. <!-- end -->I designed and developed the website with no templates or CSS frameworks, using React and Gatsby to generate the site.
+I wanted my website website to be more than a repository of projects. I wanted it to reflect my capabilities and personality. <!-- end -->I designed and developed the website with no templates or CSS frameworks. I used React and Gatsby for the front end.
 
 ## Design
 
 <img src="mt-portfolio-mockup.png" alt="Portfolio Home Page Mockup">
 <image-caption>An early mockup of the home page created in Gravit Designer.</image-caption>
 
-As a Linux user, I don't have ready access to standard design applications like Sketch or Affinity. Since I didn't have to worry about collaboration, I designed the website using paper and open source software, primarily Gravit Designer. While not as full-featured as some alternatives, it was easy enough to sketch out interface ideas and get coding.
+As a Linux user, I don't have easy access to typical design software like Sketch or Affinity. I designed using paper and open source software since collaboration wasn't a concern. I used Gravit Designer for the design. It's lightweight and excellent for sketching ideas.
 
 ## Stack
 
 This was my first project with Gatsby, and my first production project with React. Nonetheless, I decided to use this stack for a few reasons:
 
 1. All the benefits of static site generators (faster than querying databases at runtime, no worrying about servers.)
-2. Gatsby is _so_ fast, because of its automatic implementation of the <a href="https://developers.google.com/web/fundamentals/performance/prpl-pattern/" target="_blank">PRPL pattern</a>&mdash;including lazy-loading images, inlining of critical CSS, code splitting, responsive image sets, and much more&mdash;all out of the box!
-3. I love the declarative nature of React for creating interactive user interfaces.
+2. Gatsby is _so_ fast, because of its automatic implementation of the <a href="https://developers.google.com/web/fundamentals/performance/prpl-pattern/" target="_blank">PRPL pattern</a>&mdash;including lazy-loading images, inlining of critical CSS, code splitting, responsive image sets, and much more&mdash; out of the box. My PageInsight optimization score is 99/100.
+3. I love using React for interactivity.
 4. Using Netlify CMS I can add content on the fly without opening a code editor.
 5. I get to use GraphQL in production!
 
@@ -39,7 +39,7 @@ I'm overall very happy with my choice, and look forward to building more project
 
 ## Deployment
 
-I chose Netlify as a host instead of Github pages or a traditional host to take advantage of Netlify's baked in CI/CD capabilities with Github integration. It not only makes future changes incredibly hands-free, it also forced me to incorporate _real_ version control into my workflow with Git branches, pull requests, etc. so I don't accidentally break the live site. I also plan on integrating Netlify's CMS into the workflow, to add content on the fly.
+I chose Netlify as a host instead of Github pages or other traditional hosts. Netlify's baked it build triggers from Github caught my eye, as did the CMS. I was shocked that the website took less than half an hour to deploy!
 
 ## Summary
 
