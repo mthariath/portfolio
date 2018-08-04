@@ -5,7 +5,8 @@ import {
   Paragraph,
   Title,
   TitleBox,
-  ContactModal
+  ContactModal,
+  ContactToggle
 } from "../components/Elements";
 
 import { Toggle } from "../components/Utils";
@@ -27,19 +28,20 @@ const AboutPage = props => {
         >
           <Paragraph>
             I started making websites more than fifteen years ago, in the days
-            of Geocities and Angelfire. I enjoyed it until academic and
-            professional realities pulled me away.
+            of Geocities and Angelfire. I enjoyed it very much until academic
+            and professional responsibilities pulled me away.
           </Paragraph>
           <Paragraph>
-            I worked for a few years until I found myself in my 20s staying up
-            every night studying web development. I realized that I should
-            embrace my natural inclinations rather than fight them.
+            After school, I worked for a few years until I suddenly found myself
+            in my 20s staying up every night studying web development. That's
+            when I realized that I should embrace my natural inclinations
+            instead of fighting them.
           </Paragraph>
           <Paragraph>
-            I'm currently freelancing while developing my skills on the full
-            stack, front to back. My skills primarily lie in the front end, but
-            I'm leveling my skillset everyday. Ideally, I would like to join a
-            developer-oriented team and use my skills to create large-scale
+            These days I'm currently freelancing while honing my skills on the
+            full stack, front to back. My skills primarily lie in the front end,
+            but I'm leveling my skillset everyday. Ideally, I would like to join
+            a developer-oriented team and use my skills to create world-changing
             applications.
           </Paragraph>
           <Paragraph>
@@ -105,24 +107,21 @@ const AboutPage = props => {
           </TitleBox>
           <Paragraph>
             Outside of the realm of 1's and 0's, I have a deep passion for
-            woodworking and music&mdash;I will have some cool projects to share
-            soon enough. I also enjoy cooking and have recently caught the
-            horticulture bug.
+            woodworking and music&mdash;I will share some work soon enough. I
+            also enjoy cooking and recently caught the horticulture bug.
           </Paragraph>
           <Paragraph>
             I'm always looking for cool projects to contribute to. Please don't
-            hesitate to reach out if there's anything I can help with.
-          </Paragraph>
-          <Toggle>
-            {({ visible, toggle }) => (
-              <>
+            hesitate to{" "}
+            <ContactToggle>
+              {toggle => (
                 <a style={{ cursor: "pointer" }} onClick={toggle}>
-                  hear from you
+                  reach out
                 </a>
-                {<ContactModal toggle={toggle} visible={visible} />}
-              </>
-            )}
-          </Toggle>
+              )}
+            </ContactToggle>{" "}
+            if there's something I can help with.
+          </Paragraph>
           <Paragraph>-Mike</Paragraph>
         </div>
       </ArticleGrid>
