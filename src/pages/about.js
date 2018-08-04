@@ -27,10 +27,13 @@ const AboutPage = props => {
         >
           <Paragraph>
             I started making websites more than fifteen years ago, in the days
-            of Geocities and Angelfire. I drifted away from web development
-            during high school and pursued various academic and professional
-            interests until my natural inclinations brought me back around
-            recently.
+            of Geocities and Angelfire. I enjoyed it until academic and
+            professional realities pulled me away.
+          </Paragraph>
+          <Paragraph>
+            I worked for a few years until I found myself in my 20s staying up
+            every night studying web development. I realized that I should
+            embrace my natural inclinations rather than fight them.
           </Paragraph>
           <Paragraph>
             I'm currently freelancing while developing my skills on the full
