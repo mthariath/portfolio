@@ -29,8 +29,9 @@ const IndexPage = props => {
           }}
         >
           <Paragraph>
-            I'm a web developer, product designer,and all around good guy. I
-            love coming up with ideas that make people's lives better.
+            I'm a web developer, product designer,and all around good guy living
+            in Chicago. I love coming up with ideas that make people's lives
+            better.
           </Paragraph>
           <Paragraph>
             While you're here, please feel free to look at{" "}

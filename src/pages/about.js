@@ -38,14 +38,14 @@ const AboutPage = props => {
             instead of fighting them.
           </Paragraph>
           <Paragraph>
-            These days I'm currently freelancing while honing my skills on the
-            full stack, front to back. My skills primarily lie in the front end,
-            but I'm leveling my skillset everyday. Ideally, I would like to join
-            a developer-oriented team and use my skills to create world-changing
-            applications.
+            These days I'm currently living in Chicago and freelancing while
+            honing my skills on the full stack, front to back. I would like to
+            join a developer-oriented team and use my skills to create
+            world-changing applications.
           </Paragraph>
           <Paragraph>
-            Here's a nifty grid that shows some of my skills:
+            My skills primarily lie in the front end, but I'm leveling my
+            skillset everyday. Here's a nifty grid that shows some of my skills:
           </Paragraph>
 
           <TitleBox>
