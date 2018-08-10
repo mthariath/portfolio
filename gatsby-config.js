@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Michael Thariath"
+    title: "Michael Thariath",
+    siteUrl: `https://thariath.com`
   },
   plugins: [
     "gatsby-plugin-glamor",
@@ -42,6 +43,17 @@ module.exports = {
         // Setting this parameter is also optional
         respectDNT: true
       }
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://thariath.com",
+        sitemap: "https://thariath.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`
     }
   ]
 };
