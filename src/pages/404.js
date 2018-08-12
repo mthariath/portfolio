@@ -15,7 +15,7 @@ const NotFoundPage = props => (
       >
         <SadFace />
         <Paragraph Center>
-          How embarassing&hellip; A web developer with a broken link&hellip;
+          How embarrassing&hellip; A web developer with a broken link&hellip;
         </Paragraph>
       </div>
     </TitleBox>
