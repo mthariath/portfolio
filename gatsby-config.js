@@ -54,6 +54,19 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sitemap`
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Mike Thariath",
+        short_name: "Thariath",
+        start_url: "/",
+        background_color: "#F5FFFD",
+        theme_color: "#21DECB",
+        display: "minimal-ui",
+        icon: "static/og_image.png" // This path is relative to the root of the site.
+      }
+    },
+    "gatsby-plugin-offline"
   ]
 };
