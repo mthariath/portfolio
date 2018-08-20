@@ -55,12 +55,12 @@ class Stripes extends Component {
                   width="150vw"
                 >
                   <defs>
-                    <clipPath id="_clipPath_9JHGqTrrZ8G9m82yBsBhy6Kyp3HVFCFZ">
+                    <clipPath>
                       <rect width="1280" height="800" />
                     </clipPath>
                   </defs>
                   <g clipPath="url(#_clipPath_9JHGqTrrZ8G9m82yBsBhy6Kyp3HVFCFZ)">
-                    <g id="Rect1">
+                    <g>
                       <rect
                         css={rectStyles[0]}
                         x="550.179"
@@ -71,7 +71,7 @@ class Stripes extends Component {
                         fill="rgb(0,0,0)"
                       />
                     </g>
-                    <g id="Rect2">
+                    <g>
                       <rect
                         css={rectStyles[1]}
                         x="600.749"
@@ -81,7 +81,7 @@ class Stripes extends Component {
                         transform="matrix(0.902,0.432,-0.578,0.832,141.618,-419.129)"
                       />
                     </g>
-                    <g id="Rect3">
+                    <g>
                       <rect
                         css={rectStyles[2]}
                         x="642.891"
@@ -92,7 +92,7 @@ class Stripes extends Component {
                         fill="rgb(0,0,0)"
                       />
                     </g>
-                    <g id="Rect4">
+                    <g>
                       <rect
                         css={rectStyles[3]}
                         x="691.054"
@@ -103,7 +103,7 @@ class Stripes extends Component {
                         fill="rgb(0,0,0)"
                       />
                     </g>
-                    <g id="Rect5">
+                    <g>
                       <rect
                         css={rectStyles[4]}
                         x="756.073"

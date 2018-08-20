@@ -34,7 +34,8 @@ const Button = props => {
         };
         const buttonProps = {
           css: css,
-          className: buttonClasses.join(" ")
+          className: buttonClasses.join(" "),
+          "aria-label": props.ariaLabel && props.ariaLabel
         };
         const button = (
           <button {...buttonProps} onClick={props.onClick}>
@@ -43,6 +44,7 @@ const Button = props => {
         );
         return props.link ? (
           <a
+            role="button"
             href={props.link}
             target={props.blank ? "_blank" : "_self"}
             {...buttonProps}
@@ -72,6 +74,7 @@ Button.propTypes = {
   blank: PropTypes.bool,
   onClick: PropTypes.func,
   Shadow: PropTypes.bool,
+  ariaLabel: PropTypes.string,
   children: PropTypes.node.isRequired
 };
 

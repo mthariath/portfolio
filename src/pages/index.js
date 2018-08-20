@@ -55,18 +55,28 @@ const IndexPage = props => {
           </Paragraph>
 
           <TitleBox title="connect with me" grid>
-            <Button Icon link="https://github.com/mthariath" blank>
+            <Button
+              Icon
+              ariaLabel="Github"
+              link="https://github.com/mthariath"
+              blank
+            >
               <i className="fab fa-github" />
             </Button>
-            <Button Icon link="https://linkedin.com/in/thariath" blank>
+            <Button
+              Icon
+              ariaLabel="LinkedIn"
+              link="https://linkedin.com/in/thariath"
+              blank
+            >
               <i className="fab fa-linkedin" />
             </Button>
-            <Button Icon link="mailto:mike@thariath.com">
+            <Button Icon ariaLabel="Email" link="mailto:mike@thariath.com">
               <i className="far fa-envelope" />
             </Button>
             <ContactToggle>
               {toggle => (
-                <Button Icon onClick={toggle}>
+                <Button Icon ariaLabel="Phone" onClick={toggle}>
                   <i className="fas fa-phone" />
                 </Button>
               )}
