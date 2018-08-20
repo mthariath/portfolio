@@ -60,7 +60,7 @@ module.exports = {
       options: {
         name: "Mike Thariath",
         short_name: "Thariath",
-        start_url: "/",
+        start_url: ".",
         background_color: "#F5FFFD",
         theme_color: "#21DECB",
         display: "minimal-ui",
